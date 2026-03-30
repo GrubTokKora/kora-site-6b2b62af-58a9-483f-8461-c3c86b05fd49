@@ -1,0 +1,365 @@
+```html
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frankie & Fanucci's – Award-Winning Pizzeria in Mamaroneck, NY</title>
+  <meta name="description" content="Visit Frankie & Fanucci's in Mamaroneck for award-winning, wood-fired Neapolitan pizza, handmade pasta, and fresh Italian favorites in a vibrant, family-friendly setting.">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Frankie & Fanucci's – Award-Winning Pizzeria in Mamaroneck, NY">
+  <meta property="og:description" content="Visit Frankie & Fanucci's in Mamaroneck for award-winning, wood-fired Neapolitan pizza, handmade pasta, and fresh Italian favorites in a vibrant, family-friendly setting.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://deveusblob.blob.core.windows.net/kora-business-images/user-media/6b2b62af-58a9-483f-8461-c3c86b05fd49/7554ddb9-6882-4421-8f54-692dccdb1927/1774852858_w561vu.jpg">
+  <meta property="og:url" content="https://www.fandfpizza.com/">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.fandfpizza.com/">
+  
+  <!-- Hero image preload -->
+  <link rel="preload" as="image" href="https://deveusblob.blob.core.windows.net/kora-business-images/user-media/6b2b62af-58a9-483f-8461-c3c86b05fd49/7554ddb9-6882-4421-8f54-692dccdb1927/1774852858_w561vu.jpg">
+  
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Frankie & Fanucci's Mamaroneck",
+    "description": "Frankie & Fanucci’s in Mamaroneck, NY is a vibrant neighborhood pizzeria known for its award-winning, thin-crust pizzas baked in traditional wood-fired ovens. Voted \"Best of Westchester\" six times, the menu also features handmade pastas, fresh salads, and Italian favorites.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "301 Mamaroneck Ave",
+      "addressLocality": "Mamaroneck",
+      "addressRegion": "NY",
+      "postalCode": "10543",
+      "addressCountry": "USA"
+    },
+    "telephone": "+19146304360",
+    "servesCuisine": ["Italian", "Pizza"],
+    "openingHours": [
+      "Mo-Th 12:00-21:00",
+      "Fr-Sa 12:00-22:00",
+      "Su 12:00-21:00"
+    ],
+    "image": "https://deveusblob.blob.core.windows.net/kora-business-images/user-media/6b2b62af-58a9-483f-8461-c3c86b05fd49/7554ddb9-6882-4421-8f54-692dccdb1927/1774852858_w561vu.jpg",
+    "url": "https://www.fandfpizza.com/"
+  }
+  </script>
+  
+  <!-- Tailwind + Fonts -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #F8F8F8;
+      color: #1a1a1a;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Playfair Display', serif;
+    }
+    .hero-bg {
+      filter: brightness(0.6);
+    }
+    .menu-category-link.active {
+        background-color: #D92323;
+        color: white;
+        font-weight: 500;
+    }
+  </style>
+</head>
+<body class="antialiased">
+
+  <!-- Header -->
+  <header id="home" class="bg-black text-white py-4 px-6 md:px-12 sticky top-0 z-50 shadow-lg">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="#home" class="flex items-center space-x-3">
+        <img src="https://images.squarespace-cdn.com/content/v1/5b021e482714e5923e6df0ff/3e38ec41-716b-48c9-93e0-5dc3d1db98d8/FF+Circle+BlackBG.jpg" alt="Frankie & Fanucci's Logo" class="h-12 w-12 rounded-full" loading="lazy">
+        <span class="text-xl font-semibold hidden sm:block">Frankie & Fanucci's</span>
+      </a>
+      <nav class="hidden md:flex items-center space-x-6">
+        <a href="#about" class="hover:text-[#D92323] transition-colors">About</a>
+        <a href="#menu" class="hover:text-[#D92323] transition-colors">Menu</a>
+        <a href="#offers" class="hover:text-[#D92323] transition-colors">Offers</a>
+        <a href="#gallery" class="hover:text-[#D92323] transition-colors">Gallery</a>
+        <a href="#contact" class="hover:text-[#D92323] transition-colors">Contact</a>
+      </nav>
+      <a href="https://order.toasttab.com/online/fandfpizza" target="_blank" class="hidden md:inline-block bg-[#D92323] text-white px-6 py-2 rounded-full hover:bg-red-700 transition-colors font-medium">Order Online</a>
+      <button id="mobile-menu-button" class="md:hidden p-2">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden mt-4">
+      <nav class="flex flex-col space-y-4">
+        <a href="#about" class="hover:text-[#D92323] transition-colors">About</a>
+        <a href="#menu" class="hover:text-[#D92323] transition-colors">Menu</a>
+        <a href="#offers" class="hover:text-[#D92323] transition-colors">Offers</a>
+        <a href="#gallery" class="hover:text-[#D92323] transition-colors">Gallery</a>
+        <a href="#contact" class="hover:text-[#D92323] transition-colors">Contact</a>
+        <a href="https://order.toasttab.com/online/fandfpizza" target="_blank" class="bg-[#D92323] text-white text-center px-6 py-2 rounded-full hover:bg-red-700 transition-colors font-medium mt-2">Order Online</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="relative h-[70vh] min-h-[400px] flex items-center justify-center text-center text-white overflow-hidden">
+      <img src="https://deveusblob.blob.core.windows.net/kora-business-images/user-media/6b2b62af-58a9-483f-8461-c3c86b05fd49/7554ddb9-6882-4421-8f54-692dccdb1927/1774852858_w561vu.jpg" 
+           alt="A delicious wood-fired pizza from Frankie & Fanucci's" 
+           class="absolute inset-0 w-full h-full object-cover hero-bg"
+           loading="eager" fetchpriority="high" decoding="async" width="1920" height="1080">
+      <div class="relative z-10 p-6">
+        <h1 class="text-5xl md:text-7xl font-bold mb-4 drop-shadow-lg">Frankie & Fanucci's</h1>
+        <p class="text-xl md:text-2xl uppercase tracking-widest drop-shadow-md">wood-fired I scratch made i fresh</p>
+        <div class="mt-8 space-x-4">
+          <a href="https://order.toasttab.com/online/fandfpizza" target="_blank" class="bg-[#D92323] text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-red-700 transition-transform hover:scale-105">Order Online</a>
+          <a href="#menu" class="bg-white text-black px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition-transform hover:scale-105">View Menu</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-6 md:px-12 bg-white">
+      <div class="container mx-auto text-center max-w-3xl">
+        <h2 class="text-4xl font-bold mb-6">Voted "Best of Westchester" Six Times</h2>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          Frankie & Fanucci’s in Mamaroneck, NY is a vibrant neighborhood pizzeria known for its award-winning, thin-crust pizzas baked in traditional wood-fired ovens. Our menu also features handmade pastas, fresh salads, and Italian favorites. With a full bar, handcrafted cocktails, and a family-friendly vibe, it’s the perfect spot for casual nights out or group gatherings.
+        </p>
+      </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-20 px-6 md:px-12">
+      <div class="container mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-12">Our Menu</h2>
+        <div class="flex flex-col md:flex-row gap-12">
+          <!-- Sticky Category Nav -->
+          <aside class="md:w-1/4 md:sticky top-28 self-start">
+            <h3 class="text-2xl font-bold mb-4">Categories</h3>
+            <nav id="menu-categories" class="flex flex-col space-y-2">
+              <a href="#cat-Antipasti" class="menu-category-link p-3 rounded-lg transition-colors hover:bg-gray-200">Antipasti</a>
+              <a href="#cat-Soup-Salad" class="menu-category-link p-3 rounded-lg transition-colors hover:bg-gray-200">Soup & Salad</a>
+              <a href="#cat-WOOD-FIRED-PIZZA" class="menu-category-link p-3 rounded-lg transition-colors hover:bg-gray-200">Wood-Fired Pizza</a>
+              <a href="#cat-Pasta" class="menu-category-link p-3 rounded-lg transition-colors hover:bg-gray-200">Pasta</a>
+              <a href="#cat-Entrees" class="menu-category-link p-3 rounded-lg transition-colors hover:bg-gray-200">Entrees</a>
+              <a href="#cat-Heros" class="menu-category-link p-3 rounded-lg transition-colors hover:bg-gray-200">Heros & 'Wich</a>
+              <a href="#cat-Dessert" class="menu-category-link p-3 rounded-lg transition-colors hover:bg-gray-200">Dessert</a>
+              <a href="#cat-Happy-Hour-Cocktails" class="menu-category-link p-3 rounded-lg transition-colors hover:bg-gray-200">Happy Hour</a>
+            </nav>
+          </aside>
+          <!-- Menu Items -->
+          <div id="menu-content" class="md:w-3/4">
+            
+            <div id="cat-Antipasti" class="menu-category-section mb-12">
+              <h3 class="text-3xl font-bold mb-6 border-b-2 border-[#D92323] pb-2">Antipasti</h3>
+              <div class="grid md:grid-cols-2 gap-x-8 gap-y-6">
+                <div><h4 class="font-bold text-lg">GARLIC BREAD</h4><p class="text-gray-600">rustic bread, parsley butter</p></div>
+                <div><h4 class="font-bold text-lg">BRUSCHETTA</h4><p class="text-gray-600">toasted ciabatta, tomato & basil</p></div>
+                <div><h4 class="font-bold text-lg">FRIED CALAMARI</h4><p class="text-gray-600">classic I buffalo</p></div>
+                <div><h4 class="font-bold text-lg">BURRATA</h4><p class="text-gray-600">fresh creamy mozzarella, balsamic shallots, grilled bread</p></div>
+                <div><h4 class="font-bold text-lg">NONNA’S MEATBALLS</h4><p class="text-gray-600">fresh brooklyn ricotta, tuscan bread</p></div>
+                <div><h4 class="font-bold text-lg">WINGS</h4><p class="text-gray-600">(BBQ I Buffalo | Balsamic Rosemary) ½ Doz.</p></div>
+              </div>
+            </div>
+
+            <div id="cat-Soup-Salad" class="menu-category-section mb-12">
+              <h3 class="text-3xl font-bold mb-6 border-b-2 border-[#D92323] pb-2">Soup & Salad</h3>
+              <div class="grid md:grid-cols-2 gap-x-8 gap-y-6">
+                <div><h4 class="font-bold text-lg">PEAR & GORGONZOLA</h4><p class="text-gray-600">greens, candied walnuts, pear vinaigrette</p></div>
+                <div><h4 class="font-bold text-lg">CAESAR</h4><p class="text-gray-600">croutons, shaved parmigiano</p></div>
+                <div><h4 class="font-bold text-lg">DI CASA</h4><p class="text-gray-600">romaine, radicchio, cherry tomato, celery, red onions, kalamata olives, chickpeas, croutons, house vinaigrette</p></div>
+                <div><h4 class="font-bold text-lg">MOZZARELLA SALAD</h4><p class="text-gray-600">tomato, roasted pepper, arugula, red onion, balsamic</p></div>
+              </div>
+            </div>
+
+            <div id="cat-WOOD-FIRED-PIZZA" class="menu-category-section mb-12">
+              <h3 class="text-3xl font-bold mb-6 border-b-2 border-[#D92323] pb-2">Wood-Fired Pizza</h3>
+              <div class="grid md:grid-cols-2 gap-x-8 gap-y-6">
+                <div><h4 class="font-bold text-lg">MARGHERITA</h4><p class="text-gray-600">fresh mozzarella, tomato sauce, basil</p></div>
+                <div><h4 class="font-bold text-lg">PEPPERONI PICANTE</h4><p class="text-gray-600">mozzarella, sauce, old fashioned pepperoni, pickled jalapeno, creamy mozzarella</p></div>
+                <div><h4 class="font-bold text-lg">SPICY SAUSAGE & ONION</h4><p class="text-gray-600">mozzarella, sauce</p></div>
+                <div><h4 class="font-bold text-lg">DI PARMA</h4><p class="text-gray-600">mozzarella, arugula, prosciutto (no sauce)</p></div>
+                <div><h4 class="font-bold text-lg">AMICI</h4><p class="text-gray-600">meatball, sausage, pepperoni, mozzarella, sauce</p></div>
+                <div><h4 class="font-bold text-lg">The ‘Q’</h4><p class="text-gray-600">mozzarella, chicken sausage, applewood smoked bacon, bbq sauce, blue cheese</p></div>
+                <div><h4 class="font-bold text-lg">WHITE</h4><p class="text-gray-600">mozzarella, ricotta, parmigiano, roasted garlic</p></div>
+                <div><h4 class="font-bold text-lg">SHROOM</h4><p class="text-gray-600">finely chopped mushrooms & shallots, fresh ricotta, bel paese cheese, truffle oil, chives (no sauce)</p></div>
+              </div>
+            </div>
+
+            <div id="cat-Pasta" class="menu-category-section mb-12">
+              <h3 class="text-3xl font-bold mb-6 border-b-2 border-[#D92323] pb-2">Pasta</h3>
+              <div class="grid md:grid-cols-2 gap-x-8 gap-y-6">
+                <div><h4 class="font-bold text-lg">PENNE ALLA VODKA</h4><p class="text-gray-600">creamy tomato</p></div>
+                <div><h4 class="font-bold text-lg">BOLO</h4><p class="text-gray-600">veal, beef & pork bolognese, fettuccine, parmigiano</p></div>
+                <div><h4 class="font-bold text-lg">RIGATONI & SPICY SAUSAGE</h4><p class="text-gray-600">creamy pomodoro, peas, fresh brooklyn ricotta</p></div>
+                <div><h4 class="font-bold text-lg">SPAGHETTI & MEATBALLS</h4><p class="text-gray-600">parmigiano</p></div>
+                <div><h4 class="font-bold text-lg">LASAGNA</h4><p class="text-gray-600">layers of fresh pasta, bolognese meat sauce, ricotta, fresh mozzarella</p></div>
+              </div>
+            </div>
+
+            <div id="cat-Entrees" class="menu-category-section mb-12">
+              <h3 class="text-3xl font-bold mb-6 border-b-2 border-[#D92323] pb-2">Entrees</h3>
+              <div class="grid md:grid-cols-2 gap-x-8 gap-y-6">
+                <div><h4 class="font-bold text-lg">PARM</h4><p class="text-gray-600">chicken, eggplant or shrimp - served with rigatoni pomodoro</p></div>
+                <div><h4 class="font-bold text-lg">MARSALA</h4><p class="text-gray-600">chicken, wild mushrooms, marsala wine sauce, roasted potatoes</p></div>
+                <div><h4 class="font-bold text-lg">SPICY SCARPARIELLO</h4><p class="text-gray-600">chicken breast, sweet sausage, spicy peppers, roasted potato</p></div>
+                <div><h4 class="font-bold text-lg">SALMON PICCATA</h4><p class="text-gray-600">pan seared, lemon butter caper sauce, roasted broccoli</p></div>
+              </div>
+            </div>
+
+            <div id="cat-Heros" class="menu-category-section mb-12">
+              <h3 class="text-3xl font-bold mb-6 border-b-2 border-[#D92323] pb-2">Heros & 'Wich</h3>
+              <div class="grid md:grid-cols-2 gap-x-8 gap-y-6">
+                <div><h4 class="font-bold text-lg">PARM HERO</h4><p class="text-gray-600">chicken cutlet, eggplant, or meatball, fresh mozzarella, pomodoro sauce</p></div>
+                <div><h4 class="font-bold text-lg">MILANESE 'WICH</h4><p class="text-gray-600">chicken cutlet, arugula, pickled red onion</p></div>
+              </div>
+            </div>
+
+            <div id="cat-Dessert" class="menu-category-section mb-12">
+              <h3 class="text-3xl font-bold mb-6 border-b-2 border-[#D92323] pb-2">Dessert</h3>
+              <div class="grid md:grid-cols-2 gap-x-8 gap-y-6">
+                <div><h4 class="font-bold text-lg">TIRAMISU</h4><p class="text-gray-600">espresso dipped biscotti, mascarpone cream</p></div>
+                <div><h4 class="font-bold text-lg">BOMBOLONI</h4><p class="text-gray-600">nutella stuffed donut holes, cinnamon-sugar</p></div>
+                <div><h4 class="font-bold text-lg">SMORES PIZZA</h4><p class="text-gray-600">nutella, charred marshmallows, graham cracker crumbs</p></div>
+              </div>
+            </div>
+
+            <div id="cat-Happy-Hour-Cocktails" class="menu-category-section mb-12">
+              <h3 class="text-3xl font-bold mb-6 border-b-2 border-[#D92323] pb-2">Happy Hour</h3>
+              <div class="grid md:grid-cols-2 gap-x-8 gap-y-6">
+                <div><h4 class="font-bold text-lg">APEROL SPRITZ</h4><p class="text-gray-600">prosecco, aperol</p></div>
+                <div><h4 class="font-bold text-lg">DOPPIO ESPRESSO MARTINI</h4><p class="text-gray-600">vodka, espresso liqueur, baileys, brewed espresso</p></div>
+                <div><h4 class="font-bold text-lg">SPICY Italian MARGARITA</h4><p class="text-gray-600">tequila, calabrian chili, limoncello, lime, rocks</p></div>
+                <div><h4 class="font-bold text-lg">RED SANGRIA</h4><p class="text-gray-600">brandy, orange liqueur, fresh fruit</p></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Offers Section -->
+    <section id="offers" class="py-20 px-6 md:px-12 bg-white">
+      <div class="container mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-12">Special Offers</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="border border-gray-200 rounded-lg p-6 shadow-md hover:shadow-xl transition-shadow">
+            <h3 class="text-2xl font-bold text-[#D92323] mb-3">$35.95 Meal Deal</h3>
+            <p class="text-gray-700">Large Margherita pizza + Tuscan or Caesar salad + old school garlic bread. Available for take-out or delivery only.</p>
+          </div>
+          <div class="border border-gray-200 rounded-lg p-6 shadow-md hover:shadow-xl transition-shadow">
+            <h3 class="text-2xl font-bold text-[#D92323] mb-3">Happy Hour</h3>
+            <p class="text-gray-700">2 for 1! Available ALL-DAY, EVERY DAY at the BAR only. See in-store menu for selection.</p>
+          </div>
+          <div class="border border-gray-200 rounded-lg p-6 shadow-md hover:shadow-xl transition-shadow">
+            <h3 class="text-2xl font-bold text-[#D92323] mb-3">F&F Fired-Up Rewards</h3>
+            <p class="text-gray-700">Join today and earn rewards! Get a $10 signup bonus, a $20 birthday bonus, and exclusive member perks.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 px-6 md:px-12">
+      <div class="container mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-12">Our Gallery</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div class="overflow-hidden rounded-lg shadow-lg"><img src="https://images.squarespace-cdn.com/content/v1/5b021e482714e5923e6df0ff/1774615313588-ADNKM4OL1CVMYWH988A6/image-asset.jpeg" alt="Gallery image of food" class="w-full h-full object-cover aspect-square hover:scale-110 transition-transform duration-300" loading="lazy"></div>
+          <div class="overflow-hidden rounded-lg shadow-lg"><img src="https://images.squarespace-cdn.com/content/v1/5b021e482714e5923e6df0ff/1774554424323-AM2OY4GOE4BR18O4OJGI/image-asset.jpeg" alt="Gallery image of food" class="w-full h-full object-cover aspect-square hover:scale-110 transition-transform duration-300" loading="lazy"></div>
+          <div class="overflow-hidden rounded-lg shadow-lg"><img src="https://images.squarespace-cdn.com/content/v1/5b021e482714e5923e6df0ff/e1cde5c5-51da-4afe-abe6-380cfaeb81ce/IMG_3026.jpg" alt="Gallery image of the restaurant interior" class="w-full h-full object-cover aspect-square hover:scale-110 transition-transform duration-300" loading="lazy"></div>
+          <div class="overflow-hidden rounded-lg shadow-lg"><img src="https://images.squarespace-cdn.com/content/v1/5b021e482714e5923e6df0ff/1701830529451-MS0F0WPVMDEFP7C2H40U/PXL_20230927_152301812+%282%29.jpg" alt="Gallery image of a pizza" class="w-full h-full object-cover aspect-square hover:scale-110 transition-transform duration-300" loading="lazy"></div>
+          <div class="overflow-hidden rounded-lg shadow-lg"><img src="https://images.squarespace-cdn.com/content/v1/5b021e482714e5923e6df0ff/de376b74-cd32-4802-b440-baed13698179/DSC07521.jpg" alt="Gallery image of the restaurant interior" class="w-full h-full object-cover aspect-square hover:scale-110 transition-transform duration-300" loading="lazy"></div>
+          <div class="overflow-hidden rounded-lg shadow-lg"><img src="https://images.squarespace-cdn.com/content/v1/5b021e482714e5923e6df0ff/cc2b22ca-c065-43f8-b02f-8f2770ef5d04/Cocktails.jpg" alt="Gallery image of cocktails" class="w-full h-full object-cover aspect-square hover:scale-110 transition-transform duration-300" loading="lazy"></div>
+          <div class="overflow-hidden rounded-lg shadow-lg"><img src="https://images.squarespace-cdn.com/content/v1/5b021e482714e5923e6df0ff/1526866162349-23A1K7P8HIJ2PXYQF0VN/Mamaroneck+Storefront+2.jpg" alt="Gallery image of the restaurant storefront" class="w-full h-full object-cover aspect-square hover:scale-110 transition-transform duration-300" loading="lazy"></div>
+          <div class="overflow-hidden rounded-lg shadow-lg"><img src="https://images.squarespace-cdn.com/content/v1/5b021e482714e5923e6df0ff/1714448813116-YFLHW71BU58J5DZINMEB/R6_01943.jpg" alt="Gallery image of the restaurant interior" class="w-full h-full object-cover aspect-square hover:scale-110 transition-transform duration-300" loading="lazy"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Hours Section -->
+    <section id="contact" class="py-20 px-6 md:px-12 bg-black text-white">
+      <div class="container mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <div class="text-center md:text-left">
+          <h2 class="text-4xl font-bold mb-6">Visit Us</h2>
+          <div class="space-y-4 text-lg">
+            <p class="flex items-center justify-center md:justify-start"><i data-lucide="map-pin" class="w-5 h-5 mr-3 text-[#D92323]"></i>301 Mamaroneck Ave, Mamaroneck, NY 10543</p>
+            <p><a href="tel:9146304360" class="flex items-center justify-center md:justify-start hover:text-[#D92323]"><i data-lucide="phone" class="w-5 h-5 mr-3 text-[#D92323]"></i>914.630.4360</a></p>
+            <p><a href="mailto:info@FandFpizza.com" class="flex items-center justify-center md:justify-start hover:text-[#D92323]"><i data-lucide="mail" class="w-5 h-5 mr-3 text-[#D92323]"></i>info@FandFpizza.com</a></p>
+          </div>
+          <div class="mt-8 flex justify-center md:justify-start space-x-4">
+            <a href="https://www.instagram.com/fandfpizza" target="_blank" class="text-white hover:text-[#D92323]"><i data-lucide="instagram" class="w-7 h-7"></i></a>
+            <a href="http://www.facebook.com/fandfpizza" target="_blank" class="text-white hover:text-[#D92323]"><i data-lucide="facebook" class="w-7 h-7"></i></a>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-3xl font-bold mb-4 text-center md:text-left">Hours</h3>
+          <ul class="space-y-2 text-lg bg-gray-800 p-6 rounded-lg">
+            <li class="flex justify-between"><span>Monday</span> <span>12:00 PM - 9:00 PM</span></li>
+            <li class="flex justify-between"><span>Tuesday</span> <span>12:00 PM - 9:00 PM</span></li>
+            <li class="flex justify-between"><span>Wednesday</span> <span>12:00 PM - 9:00 PM</span></li>
+            <li class="flex justify-between"><span>Thursday</span> <span>12:00 PM - 9:00 PM</span></li>
+            <li class="flex justify-between"><span>Friday</span> <span>12:00 PM - 10:00 PM</span></li>
+            <li class="flex justify-between"><span>Saturday</span> <span>12:00 PM - 10:00 PM</span></li>
+            <li class="flex justify-between"><span>Sunday</span> <span>12:00 PM - 9:00 PM</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 py-8 px-6 md:px-12">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2024 Frankie & Fanucci's. All Rights Reserved.</p>
+      <p class="text-sm mt-2">Website by Kora</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+
+    // Mobile menu toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    
+    // Close mobile menu on link click
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+    });
+
+    // Menu category active state on scroll
+    const sections = document.querySelectorAll('.menu-category-section');
+    const navLinks = document.querySelectorAll('.menu-category-link');
+    
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            if (pageYOffset >= sectionTop - 150) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').includes(current)) {
+                link.classList.add('active');
+            }
+        });
+    });
+  </script>
+</body>
+</html>
+```
