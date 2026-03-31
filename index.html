@@ -2999,7 +2999,7 @@
         </div>
         <div class="newsletter-options">
           <label class="newsletter-option">
-            <input id="newsletter-email-optin" type="checkbox">
+            <input id="newsletter-email-optin" type="checkbox" checked>
             <span>Email Updates</span>
           </label>
           <label class="newsletter-option">
@@ -3175,7 +3175,7 @@
         messageEl.style.color = isError ? "#ffb4b4" : "#9ff0b1";
       }
 
-      if (!apiBaseUrl || !businessId || businessId === "6b2b62af-58a9-483f-8461-c3c86b05fd49") {
+      if (!apiBaseUrl || !businessId) {
         showMessage("Newsletter is not configured yet.", true);
         return;
       }
