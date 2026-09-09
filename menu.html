@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Menu — Frankie &amp; Fanucci's Pizza &amp; Italian, Mamaroneck NY</title>
+<meta content="Wood-fired Neapolitan pizza, handmade pasta, antipasti, heroes, cocktails and more. Full menu for dine-in, takeout and delivery at Frankie &amp; Fanucci's in Mamaroneck." name="description"/>
+
+<link href="assets/styles.css" rel="stylesheet"/>
+<meta content="website" property="og:type"/>
+<meta content="Menu — Frankie &amp; Fanucci's Pizza &amp; Italian, Mamaroneck NY" property="og:title"/>
+<meta content="Wood-fired Neapolitan pizza, handmade pasta, antipasti, heroes, cocktails and more. Full menu for dine-in, takeout and delivery at Frankie &amp; Fanucci's in Mamaroneck." property="og:description"/>
+<meta content="https://images.squarespace-cdn.com/content/v1/5b021e482714e5923e6df0ff/cf3c8f1a-2dc3-4dbc-8217-7e2eacb889c7/amici.jpg" property="og:image"/>
+
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Menu — Frankie &amp; Fanucci's Pizza &amp; Italian, Mamaroneck NY" name="twitter:title"/>
+<meta content="Wood-fired Neapolitan pizza, handmade pasta, antipasti, heroes, cocktails and more. Full menu for dine-in, takeout and delivery at Frankie &amp; Fanucci's in Mamaroneck." name="twitter:description"/>
+<meta content="https://images.squarespace-cdn.com/content/v1/5b021e482714e5923e6df0ff/cf3c8f1a-2dc3-4dbc-8217-7e2eacb889c7/amici.jpg" name="twitter:image"/>
+<script>
+    window.KORA_SITE_CONFIG = {
+      apiBaseUrl: "https://kora-agent.quseappdev.com",
+      businessId: "6b2b62af-58a9-483f-8461-c3c86b05fd49",
+      recaptchaSiteKey: "6LfRt44sAAAAACVTvFvGjoufmEcZqZk_pT4T_5Xd"
+    };
+    window.KORA_CONFIG = Object.assign(window.KORA_CONFIG || {}, window.KORA_SITE_CONFIG);
+  </script>
+<style>
+    /* ── Tokens ── */
+    :root {
+      --col-primary: #1c1c1a;
+      --col-secondary: #f4f0e6;
+      --col-accent: #b33a2b;
+      --col-tint: #ede8d8;
+      --font-display: 'Freight Big Pro', Georgia, serif;
+      --font-body: Georgia, serif;
+      --font-sans: 'Inter', system-ui, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--col-secondary);
+      color: var(--col-primary);
+      font-family: var(--font-body);
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    /* ── HEADER SHELL ── */
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      height: 64px;
+      background: var(--col-primary);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+      transition: height 200ms ease, border-bottom 200ms ease;
+    }
+    .site-header.scrolled {
+      height: 56px;
+      border-bottom: 2px solid var(--col-accent);
+    }
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+    .header-logo {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      object-fit: cover;
+      transition: width 200ms ease, height 200ms ease;
+    }
+    .site-header.scrolled .header-logo {
+      width: 38px;
+      height: 38px;
+    }
+    .header-wordmark {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: #f4f0e6;
+      white-space: nowrap;
+    }
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      list-style: none;
+    }
+    .header-nav a {
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: rgba(244,240,230,0.8);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .header-nav a:hover { color: #f4f0e6; }
+    .header-nav a.active {
+      color: #f4f0e6;
+      text-decoration: underline;
+      text-decoration-color: var(--col-accent);
+      text-underline-offset: 3px;
+    }
+    .header-cta {
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      background: var(--col-accent);
+      color: #f4f0e6;
+      padding: 0.5rem 1.2rem;
+      border-radius: 0;
+      text-decoration: none;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .header-cta:hover { opacity: 0.9; }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 18px;
+      height: 2px;
+      background: #f4f0e6;
+    }
+
+    /* Mobile drawer */
+    .nav-drawer {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: var(--col-primary);
+      z-index: 200;
+      flex-direction: column;
+      padding: 2rem;
+    }
+    .nav-drawer.open { display: flex; }
+    .drawer-close {
+      align-self: flex-end;
+      background: none;
+      border: none;
+      color: #f4f0e6;
+      font-size: 1.5rem;
+      cursor: pointer;
+      margin-bottom: 2rem;
+    }
+    .drawer-nav {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      flex: 1;
+    }
+    .drawer-nav a {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      color: #f4f0e6;
+      text-decoration: none;
+    }
+    .drawer-nav a.active { color: var(--col-accent); }
+    .drawer-cta {
+      display: inline-block;
+      font-family: var(--font-sans);
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      background: var(--col-accent);
+      color: #f4f0e6;
+      padding: 0.75rem 1.75rem;
+      text-decoration: none;
+      margin-top: 2rem;
+      align-self: flex-start;
+    }
+
+    @media (max-width: 900px) {
+      .header-nav, .header-cta { display: none; }
+      .hamburger { display: flex; }
+    }
+
+    /* ── PAGE BODY OFFSET ── */
+    .page-body { padding-top: 64px; }
+
+    /* ── MENU PAGE HERO BAND ── */
+    .menu-hero {
+      background: var(--col-primary);
+      padding: 3.5rem 2rem 2.5rem;
+      text-align: left;
+    }
+    .menu-hero-eyebrow {
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      font-variant: small-caps;
+      letter-spacing: 0.12em;
+      color: var(--col-accent);
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+    .menu-hero h1 {
+      font-family: var(--font-display);
+      font-size: 4rem;
+      font-weight: 400;
+      color: #f4f0e6;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+    .menu-hero-sub {
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      color: rgba(244,240,230,0.7);
+      max-width: 55ch;
+      line-height: 1.6;
+    }
+    .menu-hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-top: 1.75rem;
+      flex-wrap: wrap;
+    }
+    .btn-accent {
+      display: inline-block;
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      background: var(--col-accent);
+      color: #f4f0e6;
+      padding: 0.75rem 1.75rem;
+      text-decoration: none;
+    }
+    .btn-accent:hover { opacity: 0.9; }
+
+    /* ── GLUTEN-FREE NOTICE ── */
+    .gf-notice {
+      background: var(--col-tint);
+      padding: 1.25rem 2rem;
+      font-family: var(--font-sans);
+      font-size: 0.875rem;
+      color: rgba(28,28,26,0.75);
+      border-left: 3px solid var(--col-accent);
+    }
+    .gf-notice strong {
+      color: var(--col-primary);
+      font-weight: 600;
+    }
+
+    /* ── MENU SECTION WRAPPER ── */
+    .menu-section {
+      padding: 3.5rem 2rem;
+      background: var(--col-secondary);
+    }
+    .menu-section.alt { background: var(--col-tint); }
+
+    /* Category heading block */
+    .cat-eyebrow {
+      display: block;
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      font-variant: small-caps;
+      letter-spacing: 0.12em;
+      color: var(--col-accent);
+      margin-bottom: 0.4rem;
+    }
+    .cat-rule {
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: var(--col-accent);
+      margin-bottom: 1.5rem;
+    }
+    .cat-heading {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 400;
+      color: var(--col-primary);
+      margin-bottom: 0.35rem;
+      line-height: 1.15;
+    }
+    .cat-desc {
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      color: rgba(28,28,26,0.65);
+      margin-bottom: 1.75rem;
+      max-width: 70ch;
+      line-height: 1.5;
+    }
+
+    /* Menu item list */
+    .menu-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 3rem;
+      list-style: none;
+    }
+    .menu-item {
+      padding: 0.9rem 0;
+      border-bottom: 1px solid rgba(28,28,26,0.12);
+    }
+    .menu-item:last-child { border-bottom: none; }
+    .item-name {
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: var(--col-primary);
+      display: block;
+    }
+    .item-desc {
+      font-family: var(--font-sans);
+      font-size: 0.875rem;
+      color: rgba(28,28,26,0.65);
+      display: block;
+      margin-top: 0.15rem;
+      line-height: 1.45;
+    }
+
+    /* Single-column list variant */
+    .menu-list.single { grid-template-columns: 1fr; }
+
+    /* Section image */
+    .cat-image {
+      width: 100%;
+      max-width: 480px;
+      height: 280px;
+      object-fit: cover;
+      display: block;
+      margin-bottom: 1.75rem;
+    }
+
+    /* Toppings block */
+    .toppings-block {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(28,28,26,0.12);
+    }
+    .toppings-label {
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      font-variant: small-caps;
+      letter-spacing: 0.12em;
+      color: var(--col-accent);
+      display: block;
+      margin-bottom: 0.4rem;
+    }
+    .toppings-text {
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      color: rgba(28,28,26,0.7);
+      line-height: 1.6;
+    }
+
+    /* ── MEAL DEAL BAND ── */
+    .meal-deal-band {
+      background: var(--col-primary);
+      padding: 3rem 2rem;
+    }
+    .meal-deal-inner {
+      max-width: 640px;
+    }
+    .meal-deal-eyebrow {
+      font-family: var(--font-sans);
+      font-size: 0.7rem;
+      font-variant: small-caps;
+      letter-spacing: 0.12em;
+      color: var(--col-accent);
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    .meal-deal-heading {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      font-weight: 400;
+      color: #f4f0e6;
+      margin-bottom: 0.75rem;
+      line-height: 1.15;
+    }
+    .meal-deal-desc {
+      font-family: var(--font-sans);
+      font-size: 0.875rem;
+      color: rgba(244,240,230,0.7);
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    /* ── HAPPY HOUR BAND ── */
+    .hh-band {
+      background: var(--col-tint);
+      padding: 3rem 2rem;
+      border-top: 1px solid rgba(28,28,26,0.08);
+    }
+    .hh-inner {
+      max-width: 640px;
+    }
+    .hh-eyebrow {
+      font-family: var(--font-sans);
+      font-size: 0.7rem;
+      font-variant: small-caps;
+      letter-spacing: 0.12em;
+      color: var(--col-accent);
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    .hh-heading {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 400;
+      color: var(--col-primary);
+      margin-bottom: 0.5rem;
+    }
+    .hh-sub {
+      font-family: var(--font-sans);
+      font-size: 0.875rem;
+      color: rgba(28,28,26,0.65);
+      margin-bottom: 1.25rem;
+    }
+    .hh-link {
+      font-family: var(--font-sans);
+      font-size: 0.875rem;
+      color: var(--col-accent);
+      text-decoration: none;
+      border-bottom: 1px solid var(--col-accent);
+      padding-bottom: 1px;
+    }
+    .hh-link:hover { opacity: 0.8; }
+
+    /* ── FOOTER SHELL ── */
+    .site-footer {
+      background: var(--col-primary);
+      color: #f4f0e6;
+      padding: 3rem 2rem 2rem;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .footer-col {}
+    .footer-logo-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .footer-logo {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .footer-wordmark {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: #f4f0e6;
+    }
+    .footer-tagline {
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      color: rgba(244,240,230,0.65);
+      max-width: 22ch;
+      line-height: 1.5;
+    }
+    .footer-col-label {
+      font-family: var(--font-sans);
+      font-size: 0.7rem;
+      font-variant: small-caps;
+      letter-spacing: 0.1em;
+      color: var(--col-accent);
+      display: block;
+      margin-bottom: 0.4rem;
+    }
+    .footer-col-rule {
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: rgba(179,58,43,0.4);
+      margin-bottom: 1rem;
+    }
+    .footer-address {
+      font-family: var(--font-sans);
+      font-size: 0.875rem;
+      color: #f4f0e6;
+      line-height: 1.6;
+      font-style: normal;
+      margin-bottom: 0.75rem;
+    }
+    .footer-phone {
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      font-weight: 600;
+      color: #f4f0e6;
+      text-decoration: none;
+      display: block;
+    }
+    .footer-hours-list {
+      list-style: none;
+    }
+    .footer-hours-row {
+      display: flex;
+      gap: 1.5rem;
+      font-family: var(--font-sans);
+      font-size: 0.875rem;
+      color: #f4f0e6;
+      line-height: 1.8;
+    }
+    .footer-hours-day { font-weight: 400; }
+    .footer-hours-time { font-weight: 400; }
+    .footer-bottom-rule {
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: rgba(244,240,230,0.2);
+      margin-bottom: 1.25rem;
+    }
+    .footer-copy {
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      color: rgba(244,240,230,0.5);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .menu-hero h1 { font-size: 2.5rem; }
+      .menu-list { grid-template-columns: 1fr; }
+      .cat-image { max-width: 100%; height: 220px; }
+    }
+
+    @media (max-width: 700px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .footer-tagline { max-width: 100%; margin: 0 auto; }
+      .footer-logo-wrap { align-items: center; }
+      .footer-hours-row { justify-content: center; }
+      .footer-copy { text-align: center; }
+      .footer-col-label, .footer-col-rule { text-align: left; }
+    }
+  </style>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Menu",
+  "name": "Frankie & Fanucci's Full Menu",
+  "description": "Wood-fired Neapolitan pizza, handmade pasta, antipasti, heroes, cocktails and more.",
+  "inLanguage": "en",
+  "hasMenuSection": [
+    {
+      "@type": "MenuSection",
+      "name": "Antipasti"
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Soup & Salad"
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Wood-Fired Pizza"
+    },
+    {
+      "@type": "MenuSection",
+      "name": "The Burger"
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Heros"
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Wich"
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Pasta"
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Entrees"
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Sides"
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Dessert"
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Cocktail"
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Wine"
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Bar Snacks"
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Draft Beer"
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Bottled Beer"
+    }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Frankie & Fanucci's Menu"
+  },
+  "provider": {}
+}</script>
+<meta content="noindex, nofollow" name="robots"/><!-- KORA_FAVICON_START -->
+<link href="https://images.squarespace-cdn.com/content/v1/5b021e482714e5923e6df0ff/1527614290036-LEE8A9XZ77I7JKSTP5QE/favicon.ico?format=100w" rel="icon" type="image/x-icon"/>
+<link href="https://images.squarespace-cdn.com/content/v1/5b021e482714e5923e6df0ff/1527614290036-LEE8A9XZ77I7JKSTP5QE/favicon.ico?format=100w" rel="apple-touch-icon"/>
+<!-- KORA_FAVICON_END -->
+<!-- KORA_GOOGLE_FONTS_START -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Freight+Big+Pro:wght@400;600;700&amp;family=Freight+Sans+Pro:wght@400;600;700&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Freight+Big+Pro:wght@400;600;700&amp;family=Freight+Sans+Pro:wght@400;600;700&amp;display=swap"></noscript>
+<!-- KORA_GOOGLE_FONTS_END -->
+</head>
+<body>
+<!-- HEADER -->
+<header class="site-header" id="site-header">
+<a class="header-left" href="index.html">
+<img alt="Frankie &amp; Fanucci's logo" class="header-logo" src="https://images.squarespace-cdn.com/content/v1/5b021e482714e5923e6df0ff/3e38ec41-716b-48c9-93e0-5dc3d1db98d8/FF+Circle+BlackBG.jpg"/>
+<span class="header-wordmark">Frankie &amp; Fanucci's</span>
+</a>
+<nav aria-label="Main navigation">
+<ul class="header-nav">
+<li><a href="index.html">Home</a></li>
+<li><a class="active" href="menu.html">Menu</a></li>
+<li><a href="catering.html">Catering</a></li>
+<li><a href="groups.html">Groups</a></li>
+<li><a href="happyhour.html">Happy Hour</a></li>
+<li><a href="delivery.html">Delivery</a></li>
+<li><a href="rewards.html">Rewards</a></li>
+</ul>
+</nav>
+<a class="header-cta" href="https://order.toasttab.com/online/fandfpizza" rel="noopener" target="_blank">Order Online</a>
+<button aria-expanded="false" aria-label="Open navigation menu" class="hamburger" id="hamburger-btn">
+<span></span><span></span><span></span>
+</button>
+</header>
+<!-- MOBILE DRAWER -->
+<div aria-label="Navigation menu" aria-modal="true" class="nav-drawer" id="nav-drawer" role="dialog">
+<button aria-label="Close navigation menu" class="drawer-close" id="drawer-close">✕</button>
+<ul class="drawer-nav">
+<li><a href="index.html">Home</a></li>
+<li><a class="active" href="menu.html">Menu</a></li>
+<li><a href="catering.html">Catering</a></li>
+<li><a href="groups.html">Groups</a></li>
+<li><a href="happyhour.html">Happy Hour</a></li>
+<li><a href="delivery.html">Delivery</a></li>
+<li><a href="rewards.html">Rewards</a></li>
+</ul>
+<a class="drawer-cta" href="https://order.toasttab.com/online/fandfpizza" rel="noopener" target="_blank">Order Online</a>
+</div>
+<div class="page-body">
+<!-- MENU HERO BAND -->
+<section class="menu-hero">
+<span class="menu-hero-eyebrow">wood-fired · scratch made · fresh</span>
+<h1>Menu</h1>
+<p class="menu-hero-sub">Everything at Frankie &amp; Fanucci's in Mamaroneck is made from scratch — Neapolitan thin-crust pies fired in our wood-burning oven, handmade pastas, fresh antipasti, hearty heroes, and desserts worth saving room for. Dine in, take out, or order for delivery.</p>
+<div class="menu-hero-actions">
+<a class="btn-accent" href="https://order.toasttab.com/online/fandfpizza" rel="noopener" target="_blank">Order Online</a>
+</div>
+</section>
+<!-- GLUTEN-FREE NOTICE -->
+<div class="gf-notice">
+<strong>Gluten-free options available:</strong> Gluten-free wood-fired pizza crust available in personal size (12"). Gluten-free pasta available for any pasta dish. Our pizza kitchen uses flour — please consider your level of sensitivity when ordering.
+    </div>
+<!-- ANTIPASTI -->
+<section class="menu-section">
+<span class="cat-eyebrow">To Start</span>
+<h2 class="cat-heading">Antipasti</h2>
+<span class="cat-rule"></span>
+<img alt="Fried Calamari" class="cat-image" src="https://images.squarespace-cdn.com/content/v1/5b021e482714e5923e6df0ff/f3913b67-a0b4-46b5-a1fc-8cf868170d6d/IMG_7600.jpg"/>
+<ul class="menu-list">
+<li class="menu-item">
+<span class="item-name">Garlic Bread</span>
+<span class="item-desc">rustic bread, parsley butter</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Bruschetta</span>
+<span class="item-desc">toasted ciabatta, tomato &amp; basil</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Fried Calamari</span>
+<span class="item-desc">classic | buffalo</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Burrata</span>
+<span class="item-desc">fresh creamy mozzarella, balsamic shallots, grilled bread</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Mozzarella Sticks</span>
+<span class="item-desc">fresh mutz, parmigiano</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Wood-Fired Cauliflower</span>
+<span class="item-desc">fresh brooklyn ricotta, rosemary flat bread</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Nonna's Meatballs</span>
+<span class="item-desc">fresh brooklyn ricotta, tuscan bread</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Wings</span>
+<span class="item-desc">(BBQ | Buffalo | Balsamic Rosemary) ½ Doz.</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Spicy Shrimp</span>
+<span class="item-desc">cherry tomato, roasted garlic, spicy olive oil, grilled bread</span>
+</li>
+</ul>
+</section>
+<!-- SOUP & SALAD -->
+<section class="menu-section alt">
+<span class="cat-eyebrow">Fresh &amp; Light</span>
+<h2 class="cat-heading">Soup &amp; Salad</h2>
+<span class="cat-rule"></span>
+<img alt="Pear &amp; Gorgonzola Salad" class="cat-image" src="https://images.squarespace-cdn.com/content/v1/5b021e482714e5923e6df0ff/2038817a-5be8-4c49-88d6-10179deb9973/R6_01537.jpg"/>
+<ul class="menu-list">
+<li class="menu-item">
+<span class="item-name">Pear &amp; Gorgonzola</span>
+<span class="item-desc">greens, candied walnuts, pear vinaigrette</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Arugula</span>
+<span class="item-desc">radicchio, radish, shaved parmigiano, balsamic</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Caesar</span>
+<span class="item-desc">croutons, shaved parmigiano</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Di Casa</span>
+<span class="item-desc">romaine, radicchio, cherry tomato, celery, red onions, kalamata olives, chickpeas, croutons, house vinaigrette</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Tuscan</span>
+<span class="item-desc">greens, red onion, tomatoes, croutons, balsamic</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Mozzarella Salad</span>
+<span class="item-desc">tomato, roasted pepper, arugula, red onion, balsamic</span>
+</li>
+</ul>
+</section>
+<!-- WOOD-FIRED PIZZA -->
+<section class="menu-section">
+<span class="cat-eyebrow">From the Oven</span>
+<h2 class="cat-heading">Wood-Fired Pizza</h2>
+<span class="cat-rule"></span>
+<p class="cat-desc">Cooked well done &amp; charred. Personal (12") | Large (16"). Order any F&amp;F pizza with a gluten-free crust, available in personal size.</p>
+<img alt="Amici Pizza" class="cat-image" src="https://images.squarespace-cdn.com/content/v1/5b021e482714e5923e6df0ff/cf3c8f1a-2dc3-4dbc-8217-7e2eacb889c7/amici.jpg"/>
+<ul class="menu-list">
+<li class="menu-item">
+<span class="item-name">Margherita</span>
+<span class="item-desc">fresh mozzarella, tomato sauce, basil</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Pepperoni Picante</span>
+<span class="item-desc">mozzarella, sauce, old fashioned pepperoni, pickled jalapeno, creamy mozzarella</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Spicy Sausage &amp; Onion</span>
+<span class="item-desc">mozzarella, sauce</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Di Parma</span>
+<span class="item-desc">mozzarella, arugula, prosciutto (no sauce)</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Amici</span>
+<span class="item-desc">meatball, sausage, pepperoni, mozzarella, sauce</span>
+</li>
+<li class="menu-item">
+<span class="item-name">The 'Q'</span>
+<span class="item-desc">mozzarella, chicken sausage, applewood smoked bacon, bbq sauce, blue cheese</span>
+</li>
+<li class="menu-item">
+<span class="item-name">White</span>
+<span class="item-desc">mozzarella, ricotta, parmigiano, roasted garlic</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Shroom</span>
+<span class="item-desc">finely chopped mushrooms &amp; shallots, fresh ricotta, bel paese cheese, truffle oil, chives (no sauce)</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Giambotta</span>
+<span class="item-desc">eggplant, mushrooms, peppers, ricotta, sauce, mozzarella</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Popeye</span>
+<span class="item-desc">mozzarella, spinach, ricotta, roasted garlic, parmigiano, lemon zest (no sauce)</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Chicken &amp; Broccoli</span>
+<span class="item-desc">mozzarella, sauce, grilled chicken, roasted broccoli, garlic, parmigiano</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Veg</span>
+<span class="item-desc">mozzarella, sauce, mushrooms, caramelized onion, green peppers</span>
+</li>
+</ul>
+<div class="toppings-block">
+<span class="toppings-label">Traditional Toppings</span>
+<p class="toppings-text">pepperoni · meatball · sweet italian sausage · hot italian sausage · chicken sausage · anchovy · caramelized onion · kalamata olives · red onions · roasted mushroom · roasted red pepper · spinach · eggplant · cherry peppers · green peppers · jalapeno · broccoli · ricotta</p>
+<span class="toppings-label" style="margin-top:1rem;">Premium Toppings</span>
+<p class="toppings-text">applewood smoked bacon · stracciatella · prosciutto · grilled chicken · breaded chicken cutlet</p>
+<span class="toppings-label" style="margin-top:1rem;">Vegan Toppings</span>
+<p class="toppings-text">pepperoni · mozzarella</p>
+</div>
+</section>
+<!-- THE BURGER -->
+<section class="menu-section alt">
+<span class="cat-eyebrow">A Classic</span>
+<h2 class="cat-heading">The Burger</h2>
+<span class="cat-rule"></span>
+<img alt="The Burger" class="cat-image" src="https://images.squarespace-cdn.com/content/v1/5b021e482714e5923e6df0ff/1592509625506-Z9UE0XYHA1KAXNHEEJK8/burger.jpg"/>
+<ul class="menu-list single">
+<li class="menu-item">
+<span class="item-name">The Burger</span>
+<span class="item-desc">cheddar, balsamic shallots, lettuce, tomato, pickles, special sauce, brioche bun &amp; fries</span>
+</li>
+</ul>
+</section>
+<!-- HEROS -->
+<section class="menu-section">
+<span class="cat-eyebrow">Sandwiches</span>
+<h2 class="cat-heading">Heros</h2>
+<span class="cat-rule"></span>
+<p class="cat-desc">12" Italian bread. Served with fries or Caesar, Tuscan, or Arugula Salad.</p>
+<img alt="Caprese Hero" class="cat-image" src="https://images.squarespace-cdn.com/content/v1/5b021e482714e5923e6df0ff/1701841079296-LF8UXH7NF3C9ER0H5HF8/IMG_8438.jpg"/>
+<ul class="menu-list">
+<li class="menu-item">
+<span class="item-name">Parm</span>
+<span class="item-desc">chicken cutlet, eggplant, or meatball, fresh mozzarella, pomodoro sauce</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Sausage, Peppers &amp; Onions</span>
+<span class="item-desc">sauteed festival style</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Grilled Chicken</span>
+<span class="item-desc">arugula, tomato, mayo</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Grilled Chicken &amp; Roasted Peppers</span>
+<span class="item-desc">fresh mozzarella</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Caprese</span>
+<span class="item-desc">fresh mozzarella, roasted peppers, tomato, prosciutto, basil, arugula, balsamic &amp; oil</span>
+</li>
+</ul>
+</section>
+<!-- WICH -->
+<section class="menu-section alt">
+<span class="cat-eyebrow">On a Roll</span>
+<h2 class="cat-heading">Wich</h2>
+<span class="cat-rule"></span>
+<p class="cat-desc">House wood-oven roll. Served with fries or Caesar, Tuscan, or Arugula Salad.</p>
+<img alt="Chicken &amp; Bacon Wich" class="cat-image" src="https://images.squarespace-cdn.com/content/v1/5b021e482714e5923e6df0ff/3b559fef-b2db-4cf5-b61c-74e14bda4757/Chicken+%26+Bacon+Wich.png"/>
+<ul class="menu-list">
+<li class="menu-item">
+<span class="item-name">Milanese</span>
+<span class="item-desc">chicken cutlet, arugula, pickled red onion</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Chicken &amp; Bacon</span>
+<span class="item-desc">applewood smoked bacon, tomato, balsamic shallots, greens, mayo</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Roasted Eggplant</span>
+<span class="item-desc">mozzarella, roasted peppers, basil, balsamic</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Chicken Burrata</span>
+<span class="item-desc">creamy mozzarella, chicken cutlet, tomato, arugula, cherry pepper, basil, balsamic</span>
+</li>
+</ul>
+</section>
+<!-- PASTA -->
+<section class="menu-section">
+<span class="cat-eyebrow">Handmade</span>
+<h2 class="cat-heading">Pasta</h2>
+<span class="cat-rule"></span>
+<p class="cat-desc">Gluten-free pasta available for any dish. Add: Grilled Chicken | Chicken Cutlet | Shrimp | Salmon | Steak | Meatball.</p>
+<img alt="Lasagna Bolognese" class="cat-image" src="https://images.squarespace-cdn.com/content/v1/5b021e482714e5923e6df0ff/1593023082552-MLNHZ6F6BYRZ00DOKWID/lasagna+bolognese.jpg"/>
+<ul class="menu-list">
+<li class="menu-item">
+<span class="item-name">Penne alla Vodka</span>
+<span class="item-desc">creamy tomato</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Bolo</span>
+<span class="item-desc">veal, beef &amp; pork bolognese, fettuccine, parmigiano</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Rigatoni &amp; Spicy Sausage</span>
+<span class="item-desc">creamy pomodoro, peas, fresh brooklyn ricotta</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Ravioli Vermouth</span>
+<span class="item-desc">cheese ravioli, vermouth &amp; tomato cream sauce</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Rigatoni &amp; Burrata</span>
+<span class="item-desc">pomodoro, creamy mozzarella, fresh basil</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Fettuccine Alfredo</span>
+<span class="item-desc">classic parmigiano cream sauce</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Spicy Shrimp &amp; Spaghetti</span>
+<span class="item-desc">cherry tomato, chili flakes, garlic &amp; oil</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Cavatelli</span>
+<span class="item-desc">chicken sausage, escarole, white beans, parmigiano</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Ravioli Pomodoro</span>
+<span class="item-desc">cheese ravioli &amp; sauce</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Spaghetti &amp; Meatballs</span>
+<span class="item-desc">parmigiano</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Gnocchi Siciliana</span>
+<span class="item-desc">fried eggplant, fresh mozzarella, parmigiana, pomodoro, basil</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Truffled Spaghetti</span>
+<span class="item-desc">mushrooms, cream sauce, ricotta, truffle oil, chives</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Lasagna</span>
+<span class="item-desc">layers of fresh pasta, bolognese meat sauce, ricotta, fresh mozzarella</span>
+</li>
+</ul>
+</section>
+<!-- ENTREES -->
+<section class="menu-section alt">
+<span class="cat-eyebrow">Main Course</span>
+<h2 class="cat-heading">Entrees</h2>
+<span class="cat-rule"></span>
+<ul class="menu-list">
+<li class="menu-item">
+<span class="item-name">Parm</span>
+<span class="item-desc">chicken, eggplant or shrimp — served with rigatoni pomodoro</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Marsala</span>
+<span class="item-desc">chicken, wild mushrooms, marsala wine sauce, roasted potatoes</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Francese</span>
+<span class="item-desc">chicken or shrimp, egg battered, lemon white wine pan sauce, roasted broccoli</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Hanger Steak</span>
+<span class="item-desc">grilled, fresh herb gremolata, roasted potatoes</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Spicy Scarpariello</span>
+<span class="item-desc">chicken breast, sweet sausage, spicy peppers, roasted potato</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Paillard</span>
+<span class="item-desc">grilled chicken, arugula, cherry tomatoes, pickled red onions, parmigiano</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Milanese</span>
+<span class="item-desc">breaded chicken breast, arugula, cherry tomatoes, pickled red onions, parmigiano</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Salmon Piccata</span>
+<span class="item-desc">pan seared, lemon butter caper sauce, roasted broccoli</span>
+</li>
+</ul>
+</section>
+<!-- SIDES -->
+<section class="menu-section">
+<span class="cat-eyebrow">On the Side</span>
+<h2 class="cat-heading">Sides</h2>
+<span class="cat-rule"></span>
+<ul class="menu-list">
+<li class="menu-item"><span class="item-name">Wood-Fired Cauliflower</span></li>
+<li class="menu-item"><span class="item-name">Roasted Broccoli</span></li>
+<li class="menu-item"><span class="item-name">Sauteed Spinach</span></li>
+<li class="menu-item"><span class="item-name">Oven Roasted Potatoes</span></li>
+<li class="menu-item"><span class="item-name">Fries</span></li>
+</ul>
+</section>
+<!-- DESSERT -->
+<section class="menu-section alt">
+<span class="cat-eyebrow">Sweet Finish</span>
+<h2 class="cat-heading">Dessert</h2>
+<span class="cat-rule"></span>
+<ul class="menu-list">
+<li class="menu-item">
+<span class="item-name">Cheesecake</span>
+<span class="item-desc">balsamic strawberries</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Tiramisu</span>
+<span class="item-desc">espresso dipped biscotti, mascarpone cream</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Zeppole</span>
+<span class="item-desc">fried dough tossed in powdered sugar</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Bomboloni</span>
+<span class="item-desc">nutella stuffed donut holes, cinnamon-sugar</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Smores Pizza</span>
+<span class="item-desc">nutella, charred marshmallows, graham cracker crumbs</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Lava Cake</span>
+<span class="item-desc">molten chocolate cake, vanilla ice cream</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Tartufo</span>
+<span class="item-desc">vanilla &amp; chocolate ice cream ball, chocolate ganache, raspberry puree</span>
+</li>
+</ul>
+</section>
+<!-- COCKTAILS -->
+<section class="menu-section">
+<span class="cat-eyebrow">Handcrafted</span>
+<h2 class="cat-heading">Cocktail</h2>
+<span class="cat-rule"></span>
+<ul class="menu-list">
+<li class="menu-item">
+<span class="item-name">Aperol Spritz</span>
+<span class="item-desc">prosecco, aperol</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Strawberry Lover</span>
+<span class="item-desc">vodka, elderflower, strawberry puree</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Doppio Espresso Martini</span>
+<span class="item-desc">vodka, espresso liqueur, baileys, brewed espresso</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Ginger Agave</span>
+<span class="item-desc">tequila, fresh ginger, lime</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Spicy Italian Margarita</span>
+<span class="item-desc">tequila, calabrian chili, limoncello, lime, rocks</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Negroni</span>
+<span class="item-desc">gin, campari, italian vermouth, rocks</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Violet Haze</span>
+<span class="item-desc">gin, elderflower, crème de violette, fresh lemon juice</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Maple Bourbon Sour</span>
+<span class="item-desc">rosemary maple syrup, citrus mix, rocks</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Red Sangria</span>
+<span class="item-desc">brandy, orange liqueur, fresh fruit</span>
+</li>
+<li class="menu-item">
+<span class="item-name">White Sangria</span>
+<span class="item-desc">prosecco, brandy, peach schnapps, fresh fruit</span>
+</li>
+</ul>
+</section>
+<!-- WINE -->
+<section class="menu-section alt">
+<span class="cat-eyebrow">By the Glass</span>
+<h2 class="cat-heading">Wine</h2>
+<span class="cat-rule"></span>
+<ul class="menu-list">
+<li class="menu-item">
+<span class="item-name">Prosecco</span>
+<span class="item-desc">coppiere, Italy</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Rosé</span>
+<span class="item-desc">chateau laulerie, france</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Pinot Grigio</span>
+<span class="item-desc">alverdi, terre degli osci, italy</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Sauvignon Blanc</span>
+<span class="item-desc">barnard griffin, wash</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Chardonnay</span>
+<span class="item-desc">deloach, heritage reserve, ca</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Montepulciano</span>
+<span class="item-desc">vigneti del sole, italy</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Malbec</span>
+<span class="item-desc">domaine bousquet, argentina</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Pinot Noir</span>
+<span class="item-desc">julia james, ca</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Cabernet Sauvignon</span>
+<span class="item-desc">josh phelps, grounded, ca</span>
+</li>
+</ul>
+</section>
+<!-- BAR SNACKS -->
+<section class="menu-section">
+<span class="cat-eyebrow">At the Bar</span>
+<h2 class="cat-heading">Bar Snacks</h2>
+<span class="cat-rule"></span>
+<ul class="menu-list">
+<li class="menu-item">
+<span class="item-name">Bar Truffle Fries</span>
+<span class="item-desc">fresh herbs, truffle oil, parmigiano</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Garlic Bread Bites</span>
+<span class="item-desc">rustic bread, parsley butter</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Bruschetta</span>
+<span class="item-desc">toasted ciabatta, tomato &amp; basil</span>
+</li>
+<li class="menu-item">
+<span class="item-name">R.I.S. Fried Calamari</span>
+<span class="item-desc">cherry peppers, aioli</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Mozzarella Sticks</span>
+<span class="item-desc">fresh mutz, parmigiano</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Flat Bread</span>
+<span class="item-desc">burrata cream spread</span>
+</li>
+</ul>
+</section>
+<!-- DRAFT BEER -->
+<section class="menu-section alt">
+<span class="cat-eyebrow">On Tap</span>
+<h2 class="cat-heading">Draft Beer</h2>
+<span class="cat-rule"></span>
+<ul class="menu-list">
+<li class="menu-item">
+<span class="item-name">Brooklyn Seasonal</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Birra Peroni Nastro Azzurro</span>
+<span class="item-desc">Italian pale lager</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Night Shift Nite Lite</span>
+<span class="item-desc">light lager</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Von Trapp</span>
+<span class="item-desc">helles golden lager</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Catskill Nightshine</span>
+<span class="item-desc">black lager</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Allagash White</span>
+<span class="item-desc">wheat</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Threes All or Nothing</span>
+<span class="item-desc">west coast ipa</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Brooklyn Pulp Art</span>
+<span class="item-desc">hazy ipa</span>
+</li>
+</ul>
+</section>
+<!-- BOTTLED BEER -->
+<section class="menu-section">
+<span class="cat-eyebrow">Bottled</span>
+<h2 class="cat-heading">Bottled Beer</h2>
+<span class="cat-rule"></span>
+<ul class="menu-list single">
+<li class="menu-item">
+<span class="item-name">Coors Light</span>
+<span class="item-desc">lager</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Corona</span>
+<span class="item-desc">lager</span>
+</li>
+<li class="menu-item">
+<span class="item-name">Heineken</span>
+<span class="item-desc">lager</span>
+</li>
+</ul>
+</section>
+<!-- MEAL DEAL BAND -->
+<div class="meal-deal-band">
+<div class="meal-deal-inner">
+<span class="meal-deal-eyebrow">Take-Out &amp; Delivery</span>
+<h2 class="meal-deal-heading">$35.95 Meal Deal</h2>
+<p class="meal-deal-desc">Large Margherita + Tuscan or Caesar salad + old school garlic bread. Available for take-out or delivery only. Limited 1 per order.</p>
+<a class="btn-accent" href="https://order.toasttab.com/online/fandfpizza" rel="noopener" target="_blank">Order Online</a>
+</div>
+</div>
+<!-- HAPPY HOUR CALLOUT -->
+<div class="hh-band">
+<div class="hh-inner">
+<span class="hh-eyebrow">All Day · Every Day · At the Bar</span>
+<h2 class="hh-heading">2 for 1 Happy Hour</h2>
+<p class="hh-sub">Two-for-one drinks available all day, every day at the bar. See the full bar menu for current cocktail, wine and beer selection.</p>
+<a class="hh-link" href="happyhour.html">See full bar menu →</a>
+</div>
+</div>
+</div><!-- /page-body -->
+<!-- FOOTER -->
+<footer class="site-footer">
+<div class="footer-grid">
+<!-- Column 1: Identity -->
+<div>
+<img alt="Frankie &amp; Fanucci's logo" class="footer-logo" height="52" loading="lazy" src="https://images.squarespace-cdn.com/content/v1/5b021e482714e5923e6df0ff/3e38ec41-716b-48c9-93e0-5dc3d1db98d8/FF+Circle+BlackBG.jpg" width="52"/>
+<span class="footer-wordmark">Frankie &amp; Fanucci's</span>
+<p class="footer-tagline">Bustling pizzeria serving Neapolitan thin-crust pies, pasta &amp; other fare in a casual environment.</p>
+</div>
+<!-- Column 2: Visit Us -->
+<div>
+<span class="footer-col-label">Visit Us</span>
+<span aria-hidden="true" class="accent-rule-sm"></span>
+<address class="footer-address">
+          301 Mamaroneck Ave<br/>
+          Mamaroneck, New York 10543
+        </address>
+<a class="footer-phone" href="tel:+19146304360">(914) 630-4360</a>
+</div>
+<!-- Column 3: Hours -->
+<div>
+<span class="footer-col-label">Hours</span>
+<span aria-hidden="true" class="accent-rule-sm"></span>
+<div class="footer-hours-row"><span>Mon – Thu</span><span>12 pm – 9 pm</span></div>
+<div class="footer-hours-row"><span>Fri – Sat</span><span>12 pm – 10 pm</span></div>
+<div class="footer-hours-row"><span>Sunday</span><span>12 pm – 9 pm</span></div>
+</div>
+</div>
+<div aria-hidden="true" class="footer-divider"></div>
+<p class="footer-copy">© Frankie &amp; Fanucci's · Mamaroneck, NY</p>
+</footer>
+<script>
+    // Header scroll behaviour
+    var header = document.getElementById('site-header');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 80) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    }, { passive: true });
+
+    // Mobile drawer
+    var hamburgerBtn = document.getElementById('hamburger-btn');
+    var navDrawer = document.getElementById('nav-drawer');
+    var drawerClose = document.getElementById('drawer-close');
+
+    hamburgerBtn.addEventListener('click', function() {
+      navDrawer.classList.add('open');
+      hamburgerBtn.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    });
+
+    drawerClose.addEventListener('click', function() {
+      navDrawer.classList.remove('open');
+      hamburgerBtn.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    });
+
+    navDrawer.addEventListener('click', function(e) {
+      if (e.target === navDrawer) {
+        navDrawer.classList.remove('open');
+        hamburgerBtn.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+    });
+  </script>
+<!-- KORA_BRANDING_FOOTER_SCRIPT_START -->
+<script>
+(function () {
+  var koraUrl = "https://askkora.ai";
+  var muted = "#64748b";
+  var blue = "#1E88E5";
+  var purple = "#7B1FA2";
+  var startMarker = 'KORA_' + 'BRANDING_FOOTER_START';
+  var endMarker = 'KORA_' + 'BRANDING_FOOTER_END';
+  var selector = '[data-kora-branding-footer="true"], .kora-powered-by';
+
+  function removeExisting() {
+    document.querySelectorAll(selector).forEach(function (node) {
+      if (node && node.parentNode) node.parentNode.removeChild(node);
+    });
+    var walker = document.createTreeWalker(document.documentElement, NodeFilter.SHOW_COMMENT);
+    var comments = [];
+    while (walker.nextNode()) {
+      if (walker.currentNode.nodeValue.indexOf(startMarker) !== -1 || walker.currentNode.nodeValue.indexOf(endMarker) !== -1) {
+        comments.push(walker.currentNode);
+      }
+    }
+    comments.forEach(function (node) {
+      if (node && node.parentNode) node.parentNode.removeChild(node);
+    });
+  }
+
+  function buildBranding() {
+    var wrapper = document.createElement('div');
+    wrapper.className = 'kora-powered-by';
+    wrapper.setAttribute('data-kora-branding-footer', 'true');
+    wrapper.style.cssText = 'display:flex;justify-content:flex-end;align-items:center;gap:0.35rem;padding:0.75rem 1rem;font-size:0.75rem;';
+    wrapper.innerHTML = '<span style="color:' + muted + '">Powered by</span>' +
+      '<a href="' + koraUrl + '" target="_blank" rel="nofollow noopener noreferrer" style="text-decoration:none;font-weight:600;background:linear-gradient(135deg,' + blue + ',' + purple + ');-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">Kora</a>';
+    return wrapper;
+  }
+
+  function targetFooter(allowFallback) {
+    var footer = document.querySelector('footer');
+    if (footer) return footer;
+    if (!allowFallback) return null;
+    return document.getElementById('site-footer') || document.body;
+  }
+
+  function placeBranding(allowFallback) {
+    var target = targetFooter(allowFallback);
+    if (!target) return false;
+    removeExisting();
+    target.appendChild(document.createComment(' ' + startMarker + ' '));
+    target.appendChild(buildBranding());
+    target.appendChild(document.createComment(' ' + endMarker + ' '));
+    return target.tagName && target.tagName.toLowerCase() === 'footer';
+  }
+
+  function start() {
+    if (placeBranding(false)) return;
+    var observer = new MutationObserver(function () {
+      if (placeBranding(false)) observer.disconnect();
+    });
+    observer.observe(document.documentElement, { childList: true, subtree: true });
+    window.setTimeout(function () { observer.disconnect(); placeBranding(true); }, 3000);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', start);
+  } else {
+    start();
+  }
+}());
+</script>
+<!-- KORA_BRANDING_FOOTER_SCRIPT_END -->
+</body>
+</html>

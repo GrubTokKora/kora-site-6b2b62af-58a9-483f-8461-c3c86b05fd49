@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>F&amp;F Fired-Up Rewards — Frankie &amp; Fanucci's, Mamaroneck NY</title>
+<meta content="Earn 1 point per $5 spent. 100 points = $10 off. Get $10 off your first order when you sign up. Birthday week earns a $20 reward." name="description"/>
+
+<link href="assets/styles.css" rel="stylesheet"/>
+<meta content="website" property="og:type"/>
+<meta content="F&amp;F Fired-Up Rewards — Frankie &amp; Fanucci's, Mamaroneck NY" property="og:title"/>
+<meta content="Earn 1 point per $5 spent. 100 points = $10 off. Get $10 off your first order when you sign up. Birthday week earns a $20 reward." property="og:description"/>
+
+<meta content="https://deveusblob.blob.core.windows.net/kora-business-images/user-media/6b2b62af-58a9-483f-8461-c3c86b05fd49/10ba98a4-a410-4015-99d9-701074e2e5bc/1788952875_6k0aaq.webp" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="F&amp;F Fired-Up Rewards — Frankie &amp; Fanucci's, Mamaroneck NY" name="twitter:title"/>
+<meta content="Earn 1 point per $5 spent. 100 points = $10 off. Get $10 off your first order when you sign up. Birthday week earns a $20 reward." name="twitter:description"/>
+<script>
+  window.KORA_SITE_CONFIG = {
+    apiBaseUrl: "https://kora-agent.quseappdev.com",
+    businessId: "6b2b62af-58a9-483f-8461-c3c86b05fd49",
+    recaptchaSiteKey: "6LfRt44sAAAAACVTvFvGjoufmEcZqZk_pT4T_5Xd"
+  };
+  window.KORA_CONFIG = Object.assign(window.KORA_CONFIG || {}, window.KORA_SITE_CONFIG);
+</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "F&F Fired-Up Rewards",
+  "description": "Earn 1 point per $5 spent. 100 points = $10 off. Get $10 off your first order when you sign up. Birthday week earns a $20 reward.",
+  "isPartOf": {
+    "@type": "WebSite"
+  },
+  "about": {}
+}</script>
+<style>
+  /* ── Page-level tokens ── */
+  :root {
+    --col-primary: #1c1c1a;
+    --col-secondary: #f4f0e6;
+    --col-tint: #ede8d8;
+    --col-accent: #b33a2b;
+    --font-display: 'Freight Big Pro', Georgia, serif;
+    --font-body: Inter, system-ui, sans-serif;
+  }
+
+  /* ── Reset / base ── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--col-secondary); color: var(--col-primary); font-family: var(--font-body); font-size: 1rem; line-height: 1.6; }
+
+  /* ── HEADER ── */
+  .site-header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 64px;
+    background: var(--col-primary);
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    transition: height 200ms ease, border-bottom 200ms ease;
+  }
+  .site-header.scrolled {
+    height: 56px;
+    border-bottom: 2px solid var(--col-accent);
+  }
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+  .header-logo {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    transition: width 200ms ease, height 200ms ease;
+  }
+  .site-header.scrolled .header-logo { width: 38px; height: 38px; }
+  .header-wordmark {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #f4f0e6;
+    white-space: nowrap;
+  }
+  .header-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    list-style: none;
+  }
+  .header-nav a {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    color: rgba(244,240,230,0.8);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    transition: color 150ms;
+  }
+  .header-nav a:hover { color: #f4f0e6; }
+  .header-nav a.active {
+    color: #f4f0e6;
+    text-decoration: underline;
+    text-decoration-color: var(--col-accent);
+    text-underline-offset: 3px;
+  }
+  .header-cta {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    background: var(--col-accent);
+    color: #f4f0e6;
+    padding: 0.5rem 1.2rem;
+    border-radius: 0;
+    border: none;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+  .header-cta:hover { background: #9a2f22; }
+
+  /* Hamburger */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+  }
+  .hamburger span {
+    display: block;
+    width: 18px;
+    height: 2px;
+    background: #f4f0e6;
+  }
+
+  /* Mobile drawer */
+  .nav-drawer {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: var(--col-primary);
+    z-index: 999;
+    flex-direction: column;
+    padding: 5rem 2rem 2rem;
+    gap: 0;
+  }
+  .nav-drawer.open { display: flex; }
+  .nav-drawer ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .nav-drawer ul li a {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: #f4f0e6;
+    text-decoration: none;
+    display: block;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(244,240,230,0.1);
+  }
+  .nav-drawer ul li a.active { color: var(--col-accent); }
+  .drawer-cta {
+    margin-top: 2rem;
+    display: inline-block;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    background: var(--col-accent);
+    color: #f4f0e6;
+    padding: 0.75rem 1.75rem;
+    border-radius: 0;
+    text-decoration: none;
+    text-align: center;
+  }
+  .drawer-close {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.5rem;
+    background: none;
+    border: none;
+    color: #f4f0e6;
+    font-size: 1.75rem;
+    cursor: pointer;
+    line-height: 1;
+  }
+
+  /* ── Page body offset for fixed header ── */
+  .page-body { padding-top: 64px; }
+
+  /* ── REWARDS PAGE STYLES ── */
+
+  /* Hero band */
+  .rewards-hero {
+    background: var(--col-primary);
+    padding: 5rem 2rem 4rem;
+    text-align: center;
+  }
+  .rewards-hero-eyebrow {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-variant: small-caps;
+    letter-spacing: 0.12em;
+    color: var(--col-accent);
+    text-transform: lowercase;
+    font-feature-settings: "smcp";
+    margin-bottom: 1rem;
+    display: block;
+  }
+  .rewards-hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: #f4f0e6;
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 1.25rem;
+  }
+  .rewards-hero-sub {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    color: rgba(244,240,230,0.75);
+    max-width: 48ch;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+  }
+  .rewards-hero-actions {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .btn-accent {
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    background: var(--col-accent);
+    color: #f4f0e6;
+    padding: 0.75rem 1.75rem;
+    border-radius: 0;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+  }
+  .btn-accent:hover { background: #9a2f22; }
+  .btn-ghost {
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    color: #f4f0e6;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: rgba(244,240,230,0.5);
+  }
+  .btn-ghost:hover { text-decoration-color: #f4f0e6; }
+
+  /* How it works */
+  .rewards-how {
+    background: var(--col-secondary);
+    padding: 5rem 2rem;
+  }
+  .rewards-how-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .section-eyebrow {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-variant: small-caps;
+    letter-spacing: 0.12em;
+    color: var(--col-accent);
+    text-transform: lowercase;
+    font-feature-settings: "smcp";
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  .rewards-how h2 {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    font-weight: 400;
+    color: var(--col-primary);
+    margin-bottom: 0.5rem;
+    line-height: 1.15;
+  }
+  .section-rule {
+    width: 3rem;
+    height: 2px;
+    background: var(--col-accent);
+    border: none;
+    margin: 1.25rem 0 2.5rem;
+  }
+  .earn-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    border: 1px solid rgba(28,28,26,0.12);
+  }
+  .earn-cell {
+    padding: 2.5rem 2rem;
+    border-right: 1px solid rgba(28,28,26,0.12);
+  }
+  .earn-cell:last-child { border-right: none; }
+  .earn-cell-number {
+    font-family: var(--font-display);
+    font-size: 3.5rem;
+    color: var(--col-accent);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+  .earn-cell-label {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(28,28,26,0.55);
+    margin-bottom: 0.75rem;
+  }
+  .earn-cell-desc {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: var(--col-primary);
+    line-height: 1.55;
+  }
+
+  /* Bonuses */
+  .rewards-bonuses {
+    background: var(--col-tint);
+    padding: 5rem 2rem;
+  }
+  .rewards-bonuses-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .rewards-bonuses h2 {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    font-weight: 400;
+    color: var(--col-primary);
+    margin-bottom: 0.5rem;
+    line-height: 1.15;
+  }
+  .bonus-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 2.5rem;
+  }
+  .bonus-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.5rem;
+    align-items: start;
+    padding: 2rem 0;
+    border-bottom: 1px solid rgba(28,28,26,0.12);
+  }
+  .bonus-item:first-child { border-top: 1px solid rgba(28,28,26,0.12); }
+  .bonus-marker {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    color: var(--col-accent);
+    font-style: italic;
+    line-height: 1.2;
+    min-width: 2.5rem;
+  }
+  .bonus-content-title {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--col-primary);
+    margin-bottom: 0.35rem;
+  }
+  .bonus-content-desc {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: rgba(28,28,26,0.7);
+    line-height: 1.55;
+  }
+  .bonus-amount {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    color: var(--col-accent);
+    font-weight: 400;
+    margin-top: 0.25rem;
+    display: block;
+  }
+
+  /* Program details */
+  .rewards-details {
+    background: var(--col-secondary);
+    padding: 5rem 2rem;
+  }
+  .rewards-details-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+  .rewards-details h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 3vw, 2.2rem);
+    font-weight: 400;
+    color: var(--col-primary);
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+  }
+  .rewards-details p {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: rgba(28,28,26,0.72);
+    line-height: 1.7;
+    margin-top: 1.25rem;
+  }
+  .rewards-balance-box {
+    background: var(--col-primary);
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .rewards-balance-box-label {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(244,240,230,0.6);
+  }
+  .rewards-balance-box-heading {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    color: #f4f0e6;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  .rewards-balance-box-sub {
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    color: rgba(244,240,230,0.65);
+    line-height: 1.55;
+  }
+  .rewards-balance-link {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #f4f0e6;
+    text-decoration: underline;
+    text-decoration-color: var(--col-accent);
+    text-underline-offset: 3px;
+    margin-top: 0.25rem;
+  }
+  .rewards-balance-link:hover { color: rgba(244,240,230,0.8); }
+
+  /* Sign up CTA band */
+  .rewards-signup {
+    background: var(--col-accent);
+    padding: 5rem 2rem;
+    text-align: center;
+  }
+  .rewards-signup h2 {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    color: #f4f0e6;
+    font-weight: 400;
+    margin-bottom: 0.75rem;
+    line-height: 1.15;
+  }
+  .rewards-signup p {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: rgba(244,240,230,0.85);
+    max-width: 44ch;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+  }
+  .btn-light {
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    background: #f4f0e6;
+    color: var(--col-accent);
+    padding: 0.75rem 1.75rem;
+    border-radius: 0;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+  }
+  .btn-light:hover { background: #e8e3d8; }
+
+  /* ── FOOTER ── */
+  .site-footer {
+    background: var(--col-primary);
+    color: #f4f0e6;
+    padding: 3rem 2rem 2rem;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .footer-col-identity {}
+  .footer-logo {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+  .footer-wordmark {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #f4f0e6;
+    display: block;
+    margin-bottom: 0.6rem;
+  }
+  .footer-tagline {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    color: rgba(244,240,230,0.65);
+    max-width: 22ch;
+    line-height: 1.55;
+  }
+  .footer-col-label {
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    font-variant: small-caps;
+    letter-spacing: 0.1em;
+    color: var(--col-accent);
+    text-transform: lowercase;
+    font-feature-settings: "smcp";
+    display: block;
+    margin-bottom: 0.4rem;
+  }
+  .footer-col-rule {
+    width: 100%;
+    height: 1px;
+    background: rgba(179,58,43,0.4);
+    border: none;
+    margin-bottom: 1rem;
+  }
+  .footer-address {
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    color: #f4f0e6;
+    line-height: 1.6;
+    font-style: normal;
+  }
+  .footer-phone {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: #f4f0e6;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 0.5rem;
+  }
+  .footer-hours-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+  .footer-hours-list li {
+    display: flex;
+    gap: 1.5rem;
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    color: #f4f0e6;
+  }
+  .footer-hours-list .day { flex: 0 0 auto; }
+  .footer-hours-list .time { flex: 0 0 auto; }
+  .footer-bottom-rule {
+    width: 100%;
+    height: 1px;
+    background: rgba(244,240,230,0.2);
+    border: none;
+    margin: 2rem auto 1rem;
+    max-width: 1200px;
+  }
+  .footer-closing {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    color: rgba(244,240,230,0.5);
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 900px) {
+    .header-nav, .header-cta { display: none; }
+    .hamburger { display: flex; }
+
+    .earn-grid { grid-template-columns: 1fr; }
+    .earn-cell { border-right: none; border-bottom: 1px solid rgba(28,28,26,0.12); }
+    .earn-cell:last-child { border-bottom: none; }
+
+    .rewards-details-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+
+    .footer-grid { grid-template-columns: 1fr; gap: 2rem; text-align: center; }
+    .footer-tagline { max-width: 100%; margin: 0 auto; }
+    .footer-logo { margin: 0 auto 0.75rem; }
+    .footer-hours-list li { justify-content: center; }
+    .footer-closing { text-align: center; }
+  }
+
+  @media (max-width: 600px) {
+    .rewards-hero { padding: 4rem 1.25rem 3rem; }
+    .rewards-how, .rewards-bonuses, .rewards-details, .rewards-signup { padding: 3.5rem 1.25rem; }
+    .rewards-balance-box { padding: 2rem 1.5rem; }
+    .rewards-hero-actions { flex-direction: column; align-items: stretch; text-align: center; }
+    .btn-accent, .btn-light { text-align: center; }
+  }
+</style>
+<meta content="noindex, nofollow" name="robots"/><!-- KORA_FAVICON_START -->
+<link href="https://images.squarespace-cdn.com/content/v1/5b021e482714e5923e6df0ff/1527614290036-LEE8A9XZ77I7JKSTP5QE/favicon.ico?format=100w" rel="icon" type="image/x-icon"/>
+<link href="https://images.squarespace-cdn.com/content/v1/5b021e482714e5923e6df0ff/1527614290036-LEE8A9XZ77I7JKSTP5QE/favicon.ico?format=100w" rel="apple-touch-icon"/>
+<!-- KORA_FAVICON_END -->
+<!-- KORA_GOOGLE_FONTS_START -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Freight+Big+Pro:wght@400;600;700&amp;family=Freight+Sans+Pro:wght@400;600;700&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Freight+Big+Pro:wght@400;600;700&amp;family=Freight+Sans+Pro:wght@400;600;700&amp;display=swap"></noscript>
+<!-- KORA_GOOGLE_FONTS_END -->
+</head>
+<body>
+<div class="page-body">
+<!-- HEADER -->
+<header class="site-header" id="site-header">
+<a class="header-left" href="index.html">
+<img alt="Frankie &amp; Fanucci's" class="header-logo" src="https://images.squarespace-cdn.com/content/v1/5b021e482714e5923e6df0ff/3e38ec41-716b-48c9-93e0-5dc3d1db98d8/FF+Circle+BlackBG.jpg"/>
+<span class="header-wordmark">Frankie &amp; Fanucci's</span>
+</a>
+<nav aria-label="Main navigation">
+<ul class="header-nav">
+<li><a href="index.html">Home</a></li>
+<li><a href="menu.html">Menu</a></li>
+<li><a href="catering.html">Catering</a></li>
+<li><a href="groups.html">Groups</a></li>
+<li><a href="happyhour.html">Happy Hour</a></li>
+<li><a href="delivery.html">Delivery</a></li>
+<li><a class="active" href="rewards.html">Rewards</a></li>
+</ul>
+</nav>
+<a class="header-cta" href="https://order.toasttab.com/online/fandfpizza" rel="noopener" target="_blank">Order Online</a>
+<button aria-expanded="false" aria-label="Open navigation" class="hamburger" id="hamburger-btn">
+<span></span><span></span><span></span>
+</button>
+</header>
+<!-- MOBILE DRAWER -->
+<nav aria-label="Mobile navigation" class="nav-drawer" id="nav-drawer">
+<button aria-label="Close navigation" class="drawer-close" id="drawer-close">×</button>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="menu.html">Menu</a></li>
+<li><a href="catering.html">Catering</a></li>
+<li><a href="groups.html">Groups</a></li>
+<li><a href="happyhour.html">Happy Hour</a></li>
+<li><a href="delivery.html">Delivery</a></li>
+<li><a class="active" href="rewards.html">Rewards</a></li>
+</ul>
+<a class="drawer-cta" href="https://order.toasttab.com/online/fandfpizza" rel="noopener" target="_blank">Order Online</a>
+</nav>
+<main>
+<!-- HERO BAND -->
+<section class="rewards-hero">
+<span class="rewards-hero-eyebrow">members only · mamaroneck</span>
+<h1>F&amp;F Fired-Up Rewards</h1>
+<p class="rewards-hero-sub">Join today and start earning rewards for every dollar you spend at Frankie &amp; Fanucci's. Get exclusive bonuses, unlock delicious perks, and fire up your experience every time you visit.</p>
+<div class="rewards-hero-actions">
+<a class="btn-accent" href="https://www.toasttab.com/fandfpizza/rewardsSignup" rel="noopener" target="_blank">Sign Up — It's Free</a>
+<a class="btn-ghost" href="https://www.toasttab.com/fandfpizza/rewardsLookup" rel="noopener" target="_blank">Check My Points →</a>
+</div>
+</section>
+<!-- HOW IT WORKS -->
+<section class="rewards-how">
+<div class="rewards-how-inner">
+<span class="section-eyebrow">how it works</span>
+<h2>Earn on Every Order</h2>
+<hr class="section-rule"/>
+<div class="earn-grid">
+<div class="earn-cell">
+<div class="earn-cell-number">1</div>
+<div class="earn-cell-label">Point earned per</div>
+<div class="earn-cell-desc">For every <strong>$5 you spend</strong> — dine-in, takeout or delivery — you earn <strong>1 point</strong>. Points accumulate automatically with every purchase, online or in-store. No punch card, no fuss.</div>
+</div>
+<div class="earn-cell">
+<div class="earn-cell-number">100</div>
+<div class="earn-cell-label">Points = $10 off</div>
+<div class="earn-cell-desc">Rack up <strong>100 points</strong> and get <strong>$10 off your next order</strong> — simple as that. There are no point limits, so keep earning and keep saving every time you visit.</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SPECIAL BONUSES -->
+<section class="rewards-bonuses">
+<div class="rewards-bonuses-inner">
+<span class="section-eyebrow">special bonuses</span>
+<h2>More Ways to Earn</h2>
+<hr class="section-rule"/>
+<div class="bonus-list">
+<div class="bonus-item">
+<div class="bonus-marker">01</div>
+<div>
+<div class="bonus-content-title">Signup Bonus</div>
+<span class="bonus-amount">$10 off</span>
+<div class="bonus-content-desc">Get <strong>$10 off your first order</strong> when you join the program. Sign up with your cell phone number and the reward is yours — instantly.</div>
+</div>
+</div>
+<div class="bonus-item">
+<div class="bonus-marker">02</div>
+<div>
+<div class="bonus-content-title">Birthday Bonus</div>
+<span class="bonus-amount">$20 reward</span>
+<div class="bonus-content-desc">Celebrate your big week with a <strong>$20 reward</strong> — our treat to you. Because every birthday deserves wood-fired pizza.</div>
+</div>
+</div>
+<div class="bonus-item">
+<div class="bonus-marker">03</div>
+<div>
+<div class="bonus-content-title">Exclusive Offers</div>
+<div class="bonus-content-desc">Enjoy <strong>special promos, early access deals, and more</strong> — only for members. The more you visit, the more you unlock.</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- PROGRAM DETAILS + BALANCE CHECK -->
+<section class="rewards-details">
+<div class="rewards-details-inner">
+<div>
+<span class="section-eyebrow">program details</span>
+<h2>Good to Know</h2>
+<hr class="section-rule"/>
+<p>Points are earned automatically with every qualifying purchase online or in-store — no manual check-in required. There are no point limits, so your balance keeps growing every visit.</p>
+<p>Points are not earned on gift cards, catering orders, group dining packages, or discounted packages. F&amp;F may update or pause the program at any time, but we'll always keep you in the loop.</p>
+<p>Sign up takes seconds — just enter your cell phone number. That's it.</p>
+</div>
+<div>
+<div class="rewards-balance-box">
+<span class="rewards-balance-box-label">Already a member?</span>
+<div class="rewards-balance-box-heading">Check Your Point Balance</div>
+<div class="rewards-balance-box-sub">See how close you are to your next $10 reward. Look up your balance any time with your phone number.</div>
+<a class="rewards-balance-link" href="https://www.toasttab.com/fandfpizza/rewardsLookup" rel="noopener" target="_blank">Check my balance →</a>
+</div>
+</div>
+</div>
+</section>
+<!-- SIGN UP CTA -->
+<section class="rewards-signup">
+<h2>Sign Up Today — It's Fast &amp; Free</h2>
+<p>It's fast, easy, and totally worth it. Simply enter your cell phone number to join the F&amp;F Fired-Up Rewards program and get $10 off your first order.</p>
+<a class="btn-light" href="https://www.toasttab.com/fandfpizza/rewardsSignup" rel="noopener" target="_blank">Join Now</a>
+</section>
+</main>
+<!-- FOOTER -->
+<footer class="site-footer">
+<div class="footer-grid">
+<!-- Column 1: Identity -->
+<div>
+<img alt="Frankie &amp; Fanucci's logo" class="footer-logo" height="52" loading="lazy" src="https://images.squarespace-cdn.com/content/v1/5b021e482714e5923e6df0ff/3e38ec41-716b-48c9-93e0-5dc3d1db98d8/FF+Circle+BlackBG.jpg" width="52"/>
+<span class="footer-wordmark">Frankie &amp; Fanucci's</span>
+<p class="footer-tagline">Bustling pizzeria serving Neapolitan thin-crust pies, pasta &amp; other fare in a casual environment.</p>
+</div>
+<!-- Column 2: Visit Us -->
+<div>
+<span class="footer-col-label">Visit Us</span>
+<span aria-hidden="true" class="accent-rule-sm"></span>
+<address class="footer-address">
+          301 Mamaroneck Ave<br/>
+          Mamaroneck, New York 10543
+        </address>
+<a class="footer-phone" href="tel:+19146304360">(914) 630-4360</a>
+</div>
+<!-- Column 3: Hours -->
+<div>
+<span class="footer-col-label">Hours</span>
+<span aria-hidden="true" class="accent-rule-sm"></span>
+<div class="footer-hours-row"><span>Mon – Thu</span><span>12 pm – 9 pm</span></div>
+<div class="footer-hours-row"><span>Fri – Sat</span><span>12 pm – 10 pm</span></div>
+<div class="footer-hours-row"><span>Sunday</span><span>12 pm – 9 pm</span></div>
+</div>
+</div>
+<div aria-hidden="true" class="footer-divider"></div>
+<p class="footer-copy">© Frankie &amp; Fanucci's · Mamaroneck, NY</p>
+</footer>
+</div><!-- /.page-body -->
+<script>
+  // Header scroll behaviour
+  var header = document.getElementById('site-header');
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 80) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  }, { passive: true });
+
+  // Mobile drawer
+  var hamburger = document.getElementById('hamburger-btn');
+  var drawer = document.getElementById('nav-drawer');
+  var drawerClose = document.getElementById('drawer-close');
+
+  hamburger.addEventListener('click', function () {
+    drawer.classList.add('open');
+    hamburger.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  });
+  drawerClose.addEventListener('click', function () {
+    drawer.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  });
+  drawer.addEventListener('click', function (e) {
+    if (e.target === drawer) {
+      drawer.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+  });
+</script>
+<!-- KORA_BRANDING_FOOTER_SCRIPT_START -->
+<script>
+(function () {
+  var koraUrl = "https://askkora.ai";
+  var muted = "#64748b";
+  var blue = "#1E88E5";
+  var purple = "#7B1FA2";
+  var startMarker = 'KORA_' + 'BRANDING_FOOTER_START';
+  var endMarker = 'KORA_' + 'BRANDING_FOOTER_END';
+  var selector = '[data-kora-branding-footer="true"], .kora-powered-by';
+
+  function removeExisting() {
+    document.querySelectorAll(selector).forEach(function (node) {
+      if (node && node.parentNode) node.parentNode.removeChild(node);
+    });
+    var walker = document.createTreeWalker(document.documentElement, NodeFilter.SHOW_COMMENT);
+    var comments = [];
+    while (walker.nextNode()) {
+      if (walker.currentNode.nodeValue.indexOf(startMarker) !== -1 || walker.currentNode.nodeValue.indexOf(endMarker) !== -1) {
+        comments.push(walker.currentNode);
+      }
+    }
+    comments.forEach(function (node) {
+      if (node && node.parentNode) node.parentNode.removeChild(node);
+    });
+  }
+
+  function buildBranding() {
+    var wrapper = document.createElement('div');
+    wrapper.className = 'kora-powered-by';
+    wrapper.setAttribute('data-kora-branding-footer', 'true');
+    wrapper.style.cssText = 'display:flex;justify-content:flex-end;align-items:center;gap:0.35rem;padding:0.75rem 1rem;font-size:0.75rem;';
+    wrapper.innerHTML = '<span style="color:' + muted + '">Powered by</span>' +
+      '<a href="' + koraUrl + '" target="_blank" rel="nofollow noopener noreferrer" style="text-decoration:none;font-weight:600;background:linear-gradient(135deg,' + blue + ',' + purple + ');-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">Kora</a>';
+    return wrapper;
+  }
+
+  function targetFooter(allowFallback) {
+    var footer = document.querySelector('footer');
+    if (footer) return footer;
+    if (!allowFallback) return null;
+    return document.getElementById('site-footer') || document.body;
+  }
+
+  function placeBranding(allowFallback) {
+    var target = targetFooter(allowFallback);
+    if (!target) return false;
+    removeExisting();
+    target.appendChild(document.createComment(' ' + startMarker + ' '));
+    target.appendChild(buildBranding());
+    target.appendChild(document.createComment(' ' + endMarker + ' '));
+    return target.tagName && target.tagName.toLowerCase() === 'footer';
+  }
+
+  function start() {
+    if (placeBranding(false)) return;
+    var observer = new MutationObserver(function () {
+      if (placeBranding(false)) observer.disconnect();
+    });
+    observer.observe(document.documentElement, { childList: true, subtree: true });
+    window.setTimeout(function () { observer.disconnect(); placeBranding(true); }, 3000);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', start);
+  } else {
+    start();
+  }
+}());
+</script>
+<!-- KORA_BRANDING_FOOTER_SCRIPT_END -->
+</body>
+</html>
