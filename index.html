@@ -141,46 +141,165 @@
   }
   </script>
 <style>
-    /* ── HEADER & NAVIGATION ── */
+/* ── HEADER & NAVIGATION ── */
     .site-header {
-      border-bottom: 1px solid rgba(244, 240, 230, 0.15);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      height: 64px;
+      background: #1c1c1a;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+      transition: height 200ms ease, border-bottom 200ms ease;
     }
-
-    .header-nav a {
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: #f4f0e6;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
+    .site-header.scrolled {
+      height: 56px;
+      border-bottom: 2px solid #b33a2b;
+    }
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
       text-decoration: none;
-      padding: 0.25rem 0;
-      transition: color 150ms ease, opacity 150ms ease;
     }
-
-    .header-nav a:hover,
-    .header-nav a:focus {
-      color: #ffffff;
-      outline: none;
+    .header-logo {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+      transition: width 200ms ease, height 200ms ease;
     }
-
+    .site-header.scrolled .header-logo {
+      width: 38px;
+      height: 38px;
+    }
+    .header-wordmark {
+      font-family: 'Freight Big Pro', Georgia, serif;
+      font-size: 1.1rem;
+      color: #f4f0e6;
+      font-weight: 400;
+      white-space: nowrap;
+    }
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .header-nav a {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.8rem;
+      color: rgba(244, 240, 230, 0.8);
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      transition: color 150ms ease;
+    }
+    .header-nav a:hover {
+      color: #f4f0e6;
+    }
     .header-nav a.active {
-      color: #ffffff;
-      font-weight: 700;
+      color: #f4f0e6;
       text-decoration: underline;
       text-decoration-color: #b33a2b;
-      text-underline-offset: 6px;
-      text-decoration-thickness: 2px;
+      text-underline-offset: 3px;
     }
-
-    .mobile-nav a {
-      font-size: 1.6rem;
-      font-weight: 600;
+    .header-cta {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      background: #b33a2b;
       color: #f4f0e6;
+      padding: 0.5rem 1.2rem;
+      border-radius: 0;
+      text-decoration: none;
+      white-space: nowrap;
+      letter-spacing: 0.04em;
+    }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 18px;
+      height: 2px;
+      background: #f4f0e6;
+    }
+    /* Mobile drawer */
+    .nav-drawer {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #1c1c1a;
+      z-index: 200;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 2rem;
+    }
+    .nav-drawer.open {
+      display: flex;
+    }
+    .drawer-close {
+      align-self: flex-end;
+      background: none;
+      border: none;
+      color: #f4f0e6;
+      font-size: 1.5rem;
+      cursor: pointer;
+      margin-bottom: 2rem;
+    }
+    .drawer-nav {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      flex: 1;
+    }
+    .drawer-nav a {
+      font-family: 'Freight Big Pro', Georgia, serif;
+      font-size: 1.5rem;
+      color: #f4f0e6;
+      text-decoration: none;
+    }
+    .drawer-nav a.active {
+      color: #f4f0e6;
+      text-decoration: underline;
+      text-decoration-color: #b33a2b;
+    }
+    .drawer-cta {
+      display: inline-block;
+      margin-top: 2rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      background: #b33a2b;
+      color: #f4f0e6;
+      padding: 0.75rem 1.75rem;
+      text-decoration: none;
     }
 
-    .mobile-nav a:hover,
-    .mobile-nav a:focus {
-      color: #b33a2b;
+    @media (max-width: 900px) {
+      .header-nav, .header-cta { display: none; }
+      .hamburger { display: flex; }
     }
 
     /* ── HERO ── */
@@ -657,50 +776,50 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Freight+Big+Pro:wght@400;600;700&amp;family=Freight+Sans+Pro:wght@400;600;700&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Freight+Big+Pro:wght@400;600;700&amp;family=Freight+Sans+Pro:wght@400;600;700&amp;display=swap"></noscript>
 <!-- KORA_GOOGLE_FONTS_END -->
-<!-- KORA_FAVICON_START -->
+
+</link></link><!-- KORA_FAVICON_START -->
 <link href="https://images.squarespace-cdn.com/content/v1/5b021e482714e5923e6df0ff/1527614290036-LEE8A9XZ77I7JKSTP5QE/favicon.ico?format=100w" rel="icon" type="image/x-icon"/>
 <link href="https://images.squarespace-cdn.com/content/v1/5b021e482714e5923e6df0ff/1527614290036-LEE8A9XZ77I7JKSTP5QE/favicon.ico?format=100w" rel="apple-touch-icon"/>
 <!-- KORA_FAVICON_END -->
 </head>
 <body>
 <div class="page-wrapper">
-<!-- ── MOBILE NAV DRAWER ── -->
-<nav aria-hidden="true" aria-label="Mobile navigation" class="mobile-nav" id="mobile-nav">
-<a href="index.html" onclick="closeMobileNav()">Home</a>
-<a href="menu.html" onclick="closeMobileNav()">Menu</a>
-<a href="catering.html" onclick="closeMobileNav()">Catering</a>
-<a href="groups.html" onclick="closeMobileNav()">Groups</a>
-<a href="happyhour.html" onclick="closeMobileNav()">Happy Hour</a>
-<a href="delivery.html" onclick="closeMobileNav()">Delivery</a>
-<a href="rewards.html" onclick="closeMobileNav()">Rewards</a>
-<div class="mobile-nav-cta">
-<a class="btn-cta btn-cta-lg" href="https://order.toasttab.com/online/fandfpizza" rel="noopener" target="_blank">Order Online</a>
-</div>
-</nav>
-<!-- ── SITE HEADER ── -->
+<!-- HEADER -->
 <header class="site-header" id="site-header">
-<a class="header-identity" href="index.html">
-<img alt="Frankie &amp; Fanucci's logo" class="header-logo" height="44" id="header-logo" loading="eager" src="https://images.squarespace-cdn.com/content/v1/5b021e482714e5923e6df0ff/3e38ec41-716b-48c9-93e0-5dc3d1db98d8/FF+Circle+BlackBG.jpg" width="44"/>
+<a aria-label="Frankie &amp; Fanucci's home" class="header-left" href="index.html">
+<img alt="Frankie &amp; Fanucci's logo" class="header-logo" src="https://images.squarespace-cdn.com/content/v1/5b021e482714e5923e6df0ff/3e38ec41-716b-48c9-93e0-5dc3d1db98d8/FF+Circle+BlackBG.jpg"/>
 <span class="header-wordmark">Frankie &amp; Fanucci's</span>
 </a>
-<nav aria-label="Main navigation" class="header-nav">
-<a class="active" href="index.html">Home</a>
-<a href="menu.html">Menu</a>
-<a href="catering.html">Catering</a>
-<a href="groups.html">Groups</a>
-<a href="happyhour.html">Happy Hour</a>
-<a href="delivery.html">Delivery</a>
-<a href="rewards.html">Rewards</a>
+<nav aria-label="Main navigation">
+<ul class="header-nav">
+<li><a class="active" href="index.html">Home</a></li>
+<li><a href="menu.html">Menu</a></li>
+<li><a href="catering.html">Catering</a></li>
+<li><a href="groups.html">Groups</a></li>
+<li><a href="happyhour.html">Happy Hour</a></li>
+<li><a href="delivery.html">Delivery</a></li>
+<li><a href="rewards.html">Rewards</a></li>
+</ul>
 </nav>
-<div class="header-right">
-<a class="btn-cta" href="https://order.toasttab.com/online/fandfpizza" rel="noopener" target="_blank">Order Online</a>
-</div>
-<button aria-controls="mobile-nav" aria-expanded="false" aria-label="Open navigation" class="hamburger" id="hamburger">
-<span></span>
-<span></span>
-<span></span>
+<a class="header-cta" href="https://order.toasttab.com/online/fandfpizza" rel="noopener" target="_blank">Order Online</a>
+<button aria-expanded="false" aria-label="Open navigation menu" class="hamburger" id="hamburger-btn">
+<span></span><span></span><span></span>
 </button>
 </header>
+<!-- MOBILE DRAWER -->
+<div aria-label="Navigation menu" aria-modal="true" class="nav-drawer" id="nav-drawer" role="dialog">
+<button aria-label="Close navigation menu" class="drawer-close" id="drawer-close-btn">✕</button>
+<ul class="drawer-nav">
+<li><a class="active" href="index.html">Home</a></li>
+<li><a href="menu.html">Menu</a></li>
+<li><a href="catering.html">Catering</a></li>
+<li><a href="groups.html">Groups</a></li>
+<li><a href="happyhour.html">Happy Hour</a></li>
+<li><a href="delivery.html">Delivery</a></li>
+<li><a href="rewards.html">Rewards</a></li>
+</ul>
+<a class="drawer-cta" href="https://order.toasttab.com/online/fandfpizza" rel="noopener" target="_blank">Order Online</a>
+</div>
 <main>
 <!-- ── HERO ── -->
 <section aria-label="Welcome to Frankie &amp; Fanucci's" id="hero">
@@ -866,63 +985,42 @@
 </footer>
 </div><!-- /.page-wrapper -->
 <script>
-  // ── HEADER SCROLL BEHAVIOUR ──
+// ── HEADER SCROLL BEHAVIOUR ──
   (function () {
     var header = document.getElementById('site-header');
-    var lastScroll = 0;
-
-    function onScroll() {
-      var y = window.scrollY || window.pageYOffset;
-      if (y > 80) {
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 80) {
         header.classList.add('scrolled');
       } else {
         header.classList.remove('scrolled');
       }
-      lastScroll = y;
-    }
-
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
+    }, { passive: true });
   })();
 
-  // ── MOBILE NAV ──
+  // ── MOBILE DRAWER ──
   (function () {
-    var hamburger = document.getElementById('hamburger');
-    var mobileNav = document.getElementById('mobile-nav');
-    var isOpen = false;
-
-    function openMobileNav() {
-      isOpen = true;
-      mobileNav.classList.add('open');
-      mobileNav.setAttribute('aria-hidden', 'false');
-      hamburger.setAttribute('aria-expanded', 'true');
-      hamburger.setAttribute('aria-label', 'Close navigation');
+    var btn = document.getElementById('hamburger-btn');
+    var drawer = document.getElementById('nav-drawer');
+    var closeBtn = document.getElementById('drawer-close-btn');
+    function openDrawer() {
+      drawer.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
       document.body.style.overflow = 'hidden';
     }
-
-    function closeMobileNav() {
-      isOpen = false;
-      mobileNav.classList.remove('open');
-      mobileNav.setAttribute('aria-hidden', 'true');
-      hamburger.setAttribute('aria-expanded', 'false');
-      hamburger.setAttribute('aria-label', 'Open navigation');
+    function closeDrawer() {
+      drawer.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
       document.body.style.overflow = '';
     }
-
-    window.closeMobileNav = closeMobileNav;
-
-    hamburger.addEventListener('click', function () {
-      if (isOpen) {
-        closeMobileNav();
-      } else {
-        openMobileNav();
-      }
+    btn.addEventListener('click', openDrawer);
+    closeBtn.addEventListener('click', closeDrawer);
+    drawer.addEventListener('click', function (e) {
+      if (e.target === drawer) closeDrawer();
     });
-
     document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && isOpen) {
-        closeMobileNav();
-        hamburger.focus();
+      if (e.key === 'Escape' && drawer.classList.contains('open')) {
+        closeDrawer();
+        btn.focus();
       }
     });
   })();
