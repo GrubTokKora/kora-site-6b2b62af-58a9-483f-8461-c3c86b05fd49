@@ -89,21 +89,19 @@ title: Menu — Frankie & Fanucci's Pizza & Italian, Mamaroneck NY
 purpose: Full restaurant menu for Frankie & Fanucci's in Mamaroneck, NY, covering antipasti, pizza, pasta, entrees, drinks, and meal deals.
 sections:
 - "Menu" — menu description and ordering action: Order Online
-- "Antipasti" — starters and appetizers: Garlic Bread, Bruschetta, Fried Calamari, Burrata, Mozzarella Sticks, Wood-Fired Cauliflower, Nonna's Meatballs, Wings, Spicy Shrimp
-- "Soup & Salad" — soups and salads: Pear & Gorgonzola, Arugula, Caesar, Di Casa, Tuscan, Mozzarella Salad
-- "Wood-Fired Pizza" — wood-fired pizzas and toppings: Margherita, Pepperoni Picante, Spicy Sausage & Onion, Di Parma, Amici, The 'Q, White, Shroom, Giambotta, Popeye, Chicken & Broccoli, Veg
-- "The Burger" — burger dish: The Burger
-- "Heros" — 12-inch sandwiches: Parm, Sausage, Peppers & Onions, Grilled Chicken, Grilled Chicken & Roasted Peppers, Caprese
-- "Wich" — wood-oven roll sandwiches: Milanese, Chicken & Bacon, Roasted Eggplant, Chicken Burrata
-- "Pasta" — handmade pasta dishes: Penne alla Vodka, Bolo, Rigatoni & Spicy Sausage, Ravioli Vermouth, Rigatoni & Burrata, Fettuccine Alfredo, Spicy Shrimp & Spaghetti, Cavatelli, Ravioli Pomodoro, Spaghetti & Meatballs, Gnocchi Siciliana, Truffled Spaghetti, Lasagna
-- "Entrees" — main courses: Parm, Marsala, Francese, Hanger Steak, Spicy Scarpariello, Paillard, Milanese, Salmon Piccata
-- "Sides" — side dishes: Wood-Fired Cauliflower, Roasted Broccoli, Sauteed Spinach, Oven Roasted Potatoes, Fries
-- "Dessert" — desserts and sweet items: Cheesecake, Tiramisu, Zeppole, Bomboloni, Smores Pizza, Lava Cake, Tartufo
-- "Cocktail" — handcrafted cocktails: Aperol Spritz, Strawberry Lover, Doppio Espresso Martini, Ginger Agave, Spicy Italian Margarita, Negroni, Violet Haze, Maple Bourbon Sour, Red Sangria, White Sangria
-- "Wine" — wines by the glass: Prosecco, Rosé, Pinot Grigio, Sauvignon Blanc, Chardonnay, Montepulciano, Malbec, Pinot Noir, Cabernet Sauvignon
-- "Bar Snacks" — bar snacks: Bar Truffle Fries, Garlic Bread Bites, Bruschetta, R.I.S. Fried Calamari, Mozzarella Sticks, Flat Bread
-- "Draft Beer" — draft beers on tap: Brooklyn Seasonal, Birra Peroni Nastro Azzurro, Night Shift Nite Lite, Von Trapp, Catskill Nightshine, Allagash White, Threes All or Nothing, Brooklyn Pulp Art
-- "Bottled Beer" — bottled beers: Coors Light, Corona, Heineken
+- "Antipasti" — starters and appetizers: Bruschetta, Burrata, Cauliflower App, Chicken Tenders & Fries, Buffalo Calamari, Fried Calamari Classic, Wings, Spicy Shrimp
+- "Soup & Salad" — soups and salads: Chicken Noodle Soup, Minestrone Soup, Arugula Salad, Caesar Salad, Di Casa Salad, Fresh Mozzarella Salad, Pear Salad, Tuscan Salad
+- "Wood-Fired Pizza" — wood-fired pizzas personal and large: Personal Margherita, Personal Loaded Pizza, Personal Amici, Personal Chicken & Broccoli, Personal Di Parma, Personal Giambotta, Personal Pepperoni Picante, Personal Classic Pepperoni, Personal Popeye, Personal Shroom, Personal Spicy Sausage & Onion, Personal The Q, Personal Veg, Personal White, Personal VEGAN Margherita, Personal GLUTEN FREE Margherita, Personal Salad Pizza, Large Margherita, Large Loaded Pizza, Large Amici, Large Chicken & Broccoli, Large Di Parma, Large Giambotta, Large Pepperoni Picante, Large Classic Pepperoni, Large Popeye, Large Shroom, Large Spicy Sausage & Onion, Large The Q, Large Veg, Large White, Large Salad Pizza, Pizza Meal Deal
+- "Heros, Wiches & Burger" — burgers, 12-inch heroes and wood-oven roll wiches: Burger, Plain Hamburger, Plain Cheese Burger, Hero Caprese, Hero Chicken Parm, Hero Eggplant Parm, Hero Grilled Chicken, Hero Grilled Chicken and Roasted Peppers, Hero Meatball Parm, Hero Sausage Pepper & Onions, Wich Chicken Bacon, Wich Chicken Buratta, Wich Milanese, Wich Roasted Eggplant
+- "Pasta" — handmade pasta dishes: Bolo, Cavatelli Chicken Sausage, Fettucine Alfredo, Gnocchi Siciliana, Lasagna, Mac & Cheese, Penne Butter Sauce, Penne Garlic and Oil, Penne Vodka, Ravioli Pomodoro, Ravioli Vermouth Sauce, Rigatoni Burrata, Rigatoni Pomodoro, Rigatoni Spicy Sausage, Spaghetti Meatballs, Spaghetti Spicy Shrimp, Truffled Spaghetti
+- "Entrees" — main courses: Chicken Francese, Chicken Marsala, Chicken Milanese, Chicken Parm, Chicken Pillard, Chicken Scarpariello, Eggplant Parm, Hanger Steak, Salmon Piccata, Shrimp Francese, Shrimp Parm
+- "Sides" — side dishes: Sauteed Broccoli Side, Steamed Broccoli Side, Rstd Cauliflower Side, Fries, Truffle Fries, Crispy Potatoes Side, Spinach Side, Side Plain Grilled Chicken, Side Plain Chicken Cutlet, Side Plain Sauteed Shrimp, Pizza Crust, Pizza Crust Gluten Free, Rosemary Flatbread
+- "Dessert" — desserts and sweet items: Affogato, Bomboloni, Cheesecake, Chocolate Lava Cake, Ice Cream Bowl, Ice Cream (1 Scoop), Smores Pizza, Tartuffo, Tiramisu, Zeppole, Gelato Carte, Occasion Cake, Plating Charge per person
+- "Cocktail" — handcrafted cocktails: Aperol Spritzer, Doppio Espresso Martini, Ginger Agave, Golden Lemonade, Limoncello Lemon Drop, Negroni, Spicy Italian Margarita, Strawberry Lover, Wild Rose, Red Sangria, White Sangria, Maple Bourbon Sour
+- "Wine" — wines by the glass: Prosecco, Rosé, Pinot Grigio, Sauvignon Blanc, Chardonnay, Montepulciano, Malbec, Pinot Noir, Cabernet Sauvignon, Red Sangria, White Sangria
+- "Bar Bites" — bar snacks: Bar Bruschetta, Bar Truffle Fries, Bar Garlic Bread Bites, Bar Calamari, Mozzarella Sticks, Bar Flat Bread
+- "Draft Beer" — draft beers on tap: Drft Seasonal, Drft Allegash Wht Wheat, Drft Brooklyn Pulp Art IPA, Drft Nite Light Lager, Drft Peroni, Drft Shipping Out Boston Lager, Drft Threes All or Nothing IPA, Drft VonTrap Helles
+- "Bottled Beer" — bottled beers: Coors Light, Corona, Heineken, N/A Heineken 00
 also: The page title and meta description appear in the <head> block and are repeated in the Open Graph and Twitter meta tags.
 
 ## rewards.html → /rewards
