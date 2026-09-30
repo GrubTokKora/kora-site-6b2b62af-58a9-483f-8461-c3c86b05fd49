@@ -1,6 +1,6 @@
 # Frankie & Fanucci's
 
-> Frankie & Fanucci's is a bustling, casual pizzeria located in Mamaroneck, New York. They serve Neapolitan thin-crust pies cooked in a wood-fired oven, alongside pasta, classic Italian appetizers, salads, and main courses, with options available for gluten-free and vegan diners.
+> Frankie & Fanucci's is a bustling pizzeria located in Mamaroneck, New York, offering a casual environment for Neapolitan thin-crust pies, pasta, and other Italian fare. The menu features wood-fired pizzas, classic appetizers, salads, and main courses, along with options for gluten-free and vegan diners.
 
 ## Menu
 Frankie & Fanucci's offers a menu centered around authentic Neapolitan pizza, cooked in a wood-fired oven. Beyond pizza, they serve classic Italian appetizers, salads, pasta dishes, and main courses, with options for gluten-free and vegan diners.
