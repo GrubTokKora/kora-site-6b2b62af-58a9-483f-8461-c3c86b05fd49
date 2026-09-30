@@ -264,17 +264,8 @@
 
     /* ── MENU (drawn by Kora into the kora:data:menu region) ── */
     .kora-menu { --km-accent: var(--col-accent); }
-    .kora-menu .kora-menu__nav {
-      position: sticky; top: 64px; z-index: 40; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none;
-      margin: 0; padding: 0.9rem 2rem; background: var(--col-primary); border-bottom: 1px solid rgba(244,240,230,0.15);
-    }
-    .kora-menu .kora-menu__nav::-webkit-scrollbar { display: none; }
-    .kora-menu .kora-menu__nav a {
-      font-family: var(--font-sans); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase;
-      color: #f4f0e6; border: 0; border-radius: 0; padding: 0.4rem 0.9rem; white-space: nowrap;
-    }
-    .kora-menu .kora-menu__nav a:hover { color: var(--col-accent); }
-    .kora-menu .kora-menu__nav a.is-active { background: var(--col-accent); color: #fff; }
+    /* The renderer adds a row of section links; this page never had one, so it stays hidden. */
+    .kora-menu .kora-menu__nav { display: none; }
     .kora-menu .kora-menu__section { margin: 0; padding: 3.5rem 2rem; background: var(--col-secondary); scroll-margin-top: 120px; }
     .kora-menu .kora-menu__section:nth-of-type(even) { background: var(--col-tint); }
     .kora-menu .kora-menu__section-title {
@@ -504,7 +495,6 @@
       .menu-hero h1 { font-size: 2.5rem; }
       .kora-menu .kora-menu__items { grid-template-columns: 1fr; }
       .kora-menu .kora-menu__section { padding: 2.5rem 1.25rem; }
-      .kora-menu .kora-menu__nav { padding: 0.75rem 1.25rem; }
       .cat-image { max-width: 100%; height: 220px; }
     }
 
@@ -637,33 +627,6 @@
 <div aria-hidden="true" class="footer-divider"></div>
 <p class="footer-copy">© Frankie &amp; Fanucci's · Mamaroneck, NY</p>
 </footer>
-<script>
-    // Menu pills: highlight the section in view (the menu itself is drawn by Kora)
-    (function () {
-      var nav = document.querySelector('.kora-menu__nav');
-      if (!nav) return;
-      var pills = Array.prototype.slice.call(nav.querySelectorAll('a[href^="#"]'));
-      var sections = pills.map(function (a) { return document.getElementById(a.getAttribute('href').slice(1)); }).filter(Boolean);
-      if (!sections.length) return;
-      var active = null;
-      function update() {
-        var current = sections[0];
-        sections.forEach(function (s) { if (window.scrollY >= s.offsetTop - 170) current = s; });
-        var pill = pills.filter(function (a) { return a.getAttribute('href') === '#' + current.id; })[0];
-        if (pill === active) return;
-        pills.forEach(function (a) { a.classList.toggle('is-active', a === pill); });
-        active = pill;
-        if (pill) {
-          var pr = pill.getBoundingClientRect(), nr = nav.getBoundingClientRect();
-          if (pr.left < nr.left) nav.scrollBy({ left: pr.left - nr.left - 16, behavior: 'smooth' });
-          else if (pr.right > nr.right) nav.scrollBy({ left: pr.right - nr.right + 16, behavior: 'smooth' });
-        }
-      }
-      window.addEventListener('scroll', update, { passive: true });
-      window.addEventListener('load', update);
-      update();
-    })();
-  </script>
 <script>
     // Header scroll behaviour
     var header = document.getElementById('site-header');
