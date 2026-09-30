@@ -262,75 +262,37 @@
       font-weight: 600;
     }
 
-    /* ── MENU SECTION WRAPPER ── */
-    .menu-section {
-      padding: 3.5rem 2rem;
-      background: var(--col-secondary);
+    /* ── MENU (drawn by Kora into the kora:data:menu region) ── */
+    .kora-menu { --km-accent: var(--col-accent); }
+    .kora-menu .kora-menu__nav {
+      position: sticky; top: 64px; z-index: 40; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none;
+      margin: 0; padding: 0.9rem 2rem; background: var(--col-primary); border-bottom: 1px solid rgba(244,240,230,0.15);
     }
-    .menu-section.alt { background: var(--col-tint); }
-
-    /* Category heading block */
-    .cat-eyebrow {
-      display: block;
-      font-family: var(--font-sans);
-      font-size: 0.75rem;
-      font-variant: small-caps;
-      letter-spacing: 0.12em;
-      color: var(--col-accent);
-      margin-bottom: 0.4rem;
+    .kora-menu .kora-menu__nav::-webkit-scrollbar { display: none; }
+    .kora-menu .kora-menu__nav a {
+      font-family: var(--font-sans); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase;
+      color: #f4f0e6; border: 0; border-radius: 0; padding: 0.4rem 0.9rem; white-space: nowrap;
     }
-    .cat-rule {
-      display: block;
-      width: 100%;
-      height: 1px;
-      background: var(--col-accent);
-      margin-bottom: 1.5rem;
+    .kora-menu .kora-menu__nav a:hover { color: var(--col-accent); }
+    .kora-menu .kora-menu__nav a.is-active { background: var(--col-accent); color: #fff; }
+    .kora-menu .kora-menu__section { margin: 0; padding: 3.5rem 2rem; background: var(--col-secondary); scroll-margin-top: 120px; }
+    .kora-menu .kora-menu__section:nth-of-type(even) { background: var(--col-tint); }
+    .kora-menu .kora-menu__section-title {
+      font-family: var(--font-display); font-size: 2rem; font-weight: 400; color: var(--col-primary);
+      line-height: 1.15; margin: 0 0 0.35rem; padding-bottom: 0.9rem; border-bottom: 1px solid var(--col-accent); margin-bottom: 1.5rem;
     }
-    .cat-heading {
-      font-family: var(--font-display);
-      font-size: 2rem;
-      font-weight: 400;
-      color: var(--col-primary);
-      margin-bottom: 0.35rem;
-      line-height: 1.15;
+    .kora-menu .kora-menu__section-desc, .kora-menu .kora-menu__section-note {
+      font-family: var(--font-sans); font-size: 0.8rem; font-style: normal; color: rgba(28,28,26,0.65); opacity: 1; margin: 0 0 1.5rem; max-width: 70ch;
     }
-    .cat-desc {
-      font-family: var(--font-sans);
-      font-size: 0.8rem;
-      color: rgba(28,28,26,0.65);
-      margin-bottom: 1.75rem;
-      max-width: 70ch;
-      line-height: 1.5;
+    .kora-menu .kora-menu__items { display: grid; grid-template-columns: 1fr 1fr; column-gap: 3rem; row-gap: 0; }
+    .kora-menu .kora-menu__item { display: block; padding: 0.9rem 0; border-bottom: 1px solid rgba(28,28,26,0.12); }
+    .kora-menu .kora-menu__item-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
+    .kora-menu .kora-menu__item-name {
+      font-family: var(--font-sans); font-size: 0.95rem; font-weight: 600; text-transform: uppercase; color: var(--col-primary);
     }
-
-    /* Menu item list */
-    .menu-list {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      column-gap: 3rem;
-      list-style: none;
-    }
-    .menu-item {
-      padding: 0.9rem 0;
-      border-bottom: 1px solid rgba(28,28,26,0.12);
-    }
-    .menu-item:last-child { border-bottom: none; }
-    .item-name {
-      font-family: var(--font-sans);
-      font-size: 0.95rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      color: var(--col-primary);
-      display: block;
-    }
-    .item-desc {
-      font-family: var(--font-sans);
-      font-size: 0.875rem;
-      color: rgba(28,28,26,0.65);
-      display: block;
-      margin-top: 0.15rem;
-      line-height: 1.45;
-    }
+    .kora-menu .kora-menu__item-price, .kora-menu .kora-menu__price-value { font-family: var(--font-sans); font-size: 0.95rem; font-weight: 600; color: var(--col-accent); }
+    .kora-menu .kora-menu__item-desc { font-family: var(--font-sans); font-size: 0.875rem; color: rgba(28,28,26,0.65); opacity: 1; margin: 0.15rem 0 0; line-height: 1.45; }
+    .kora-menu .kora-menu__menu-note { font-family: var(--font-sans); font-size: 0.8rem; padding: 0 2rem 2rem; font-style: normal; }
 
     /* Single-column list variant */
     .menu-list.single { grid-template-columns: 1fr; }
@@ -540,7 +502,9 @@
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
       .menu-hero h1 { font-size: 2.5rem; }
-      .menu-list { grid-template-columns: 1fr; }
+      .kora-menu .kora-menu__items { grid-template-columns: 1fr; }
+      .kora-menu .kora-menu__section { padding: 2.5rem 1.25rem; }
+      .kora-menu .kora-menu__nav { padding: 0.75rem 1.25rem; }
       .cat-image { max-width: 100%; height: 220px; }
     }
 
@@ -556,80 +520,7 @@
       .footer-col-label, .footer-col-rule { text-align: left; }
     }
   </style>
-<script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "Menu",
-  "name": "Frankie & Fanucci's Full Menu",
-  "description": "Wood-fired Neapolitan pizza, handmade pasta, antipasti, heroes, cocktails and more.",
-  "inLanguage": "en",
-  "hasMenuSection": [
-    {
-      "@type": "MenuSection",
-      "name": "Antipasti"
-    },
-    {
-      "@type": "MenuSection",
-      "name": "Food - Antipasti"
-    },
-    {
-      "@type": "MenuSection",
-      "name": "Wood-Fired Pizza"
-    },
-    {
-      "@type": "MenuSection",
-      "name": "The Burger"
-    },
-    {
-      "@type": "MenuSection",
-      "name": "Heros"
-    },
-    {
-      "@type": "MenuSection",
-      "name": "Wich"
-    },
-    {
-      "@type": "MenuSection",
-      "name": "Pasta"
-    },
-    {
-      "@type": "MenuSection",
-      "name": "Entrees"
-    },
-    {
-      "@type": "MenuSection",
-      "name": "Sides"
-    },
-    {
-      "@type": "MenuSection",
-      "name": "Dessert"
-    },
-    {
-      "@type": "MenuSection",
-      "name": "Cocktail"
-    },
-    {
-      "@type": "MenuSection",
-      "name": "Wine"
-    },
-    {
-      "@type": "MenuSection",
-      "name": "Bar Snacks"
-    },
-    {
-      "@type": "MenuSection",
-      "name": "Draft Beer"
-    },
-    {
-      "@type": "MenuSection",
-      "name": "Bottled Beer"
-    }
-  ],
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Frankie & Fanucci's Menu"
-  },
-  "provider": {}
-}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Restaurant","@id":"https://www.fandfpizza.com/#restaurant","name":"Frankie & Fanucci's"}</script>
 <meta content="noindex, nofollow" name="robots"/>
 <!-- KORA_GOOGLE_FONTS_START -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -694,705 +585,8 @@
 <div class="gf-notice">
 <strong>Gluten-free options available:</strong> Gluten-free wood-fired pizza crust available in personal size (12"). Gluten-free pasta available for any pasta dish. Our pizza kitchen uses flour — please consider your level of sensitivity when ordering.
     </div>
-<!-- ANTIPASTI -->
-<section class="menu-section">
-<span class="cat-eyebrow">To Start</span>
-<h2 class="cat-heading">Antipasti</h2>
-<span class="cat-rule"></span>
-<ul class="menu-list">
-<li class="menu-item">
-<span class="item-name">Bruschetta</span>
-<span class="item-desc">tomato &amp; basil, grilled bread</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Burrata</span>
-<span class="item-desc">fresh creamy mozzarella, balsamic shallots, grilled bread</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Cauliflower App</span>
-<span class="item-desc">ricotta, rosemary flatbread</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Chicken Tenders &amp; Fries</span>
-<span class="item-desc">battered chicken tenders and fries</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Buffalo Calamari</span>
-<span class="item-desc">fried tender calamari tossed with buffalo sauce, blue cheese dressing</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Fried Calamari Classic</span>
-<span class="item-desc">simply fried tender calamari, pomodoro sauce, fresh lemon</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Wings</span>
-<span class="item-desc">(BBQ | Buffalo | Balsamic Rosemary) ½ Doz.</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Spicy Shrimp</span>
-<span class="item-desc">cherry tomato, roasted garlic, spicy olive oil, grilled bread</span>
-</li>
-</ul>
-</section>
-<!-- SOUP & SALAD -->
-<section class="menu-section alt">
-<span class="cat-eyebrow">Fresh &amp; Light</span>
-<h2 class="cat-heading">Soup &amp; Salad</h2>
-<span class="cat-rule"></span>
-<img alt="Salad" class="cat-image" src="https://s3.amazonaws.com/toasttab/menu_service/restaurants/5edac62b-a082-4cf1-98ea-2b72ea15fe1e/MenuItem/0e9a70fa-aa3c-4f03-854e-ca0a329ad36a.png"/>
-<ul class="menu-list">
-<li class="menu-item">
-<span class="item-name">Chicken Noodle Soup</span>
-<span class="item-desc">gluten free</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Minestrone Soup</span>
-<span class="item-desc">rustic vegetable</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Arugula Salad</span>
-<span class="item-desc">radicchio, radish, shaved parmigiano, balsamic</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Caesar Salad</span>
-<span class="item-desc">romaine, croutons, shaved parmigiano</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Di Casa Salad</span>
-<span class="item-desc">greens, radicchio, radish, celery, tomatoes, olives, chickpeas, shaved red onions, croutons</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Fresh Mozzarella Salad</span>
-<span class="item-desc">tomato, roasted peppers, arugula, red onion, balsamic</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Pear Salad</span>
-<span class="item-desc">greens, gorgonzola, candied walnuts, pear vinaigrette</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Tuscan Salad</span>
-<span class="item-desc">greens, tomato, shaved red onion, croutons, balsamic</span>
-</li>
-</ul>
-</section>
-<!-- Food - Soup/Salad -->
-<section class="menu-section">
-<span class="cat-eyebrow">From the Oven</span>
-<h2 class="cat-heading">Wood-Fired Pizza</h2>
-<span class="cat-rule"></span>
-<img alt="Amici Pizza" class="cat-image" src="https://images.squarespace-cdn.com/content/v1/5b021e482714e5923e6df0ff/cf3c8f1a-2dc3-4dbc-8217-7e2eacb889c7/amici.jpg"/>
-<ul class="menu-list">
-<li class="menu-item">
-<span class="item-name">Personal Margherita</span>
-<span class="item-desc">fresh mozzarella, tomato sauce, basil</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Personal Loaded Pizza</span>
-<span class="item-desc">Personal Margherita Pizza with 3 toppings. Additional toppings can be added.</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Personal Amici</span>
-<span class="item-desc">meatball, sweet sausage, pepperoni, mozzarella, sauce</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Personal Chicken &amp; Broccoli</span>
-<span class="item-desc">grilled chicken, broccoli, roasted garlic, parmigiano, mozzarella, tomato sauce</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Personal Di Parma</span>
-<span class="item-desc">mozzarella, arugula, prosciutto (no sauce)</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Personal Giambotta</span>
-<span class="item-desc">roasted eggplant, mushrooms, peppers, fresh brooklyn ricotta</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Personal Pepperoni Picante</span>
-<span class="item-desc">mozzarella, sauce, old school pepperoni, pickled jalapeno, creamy mozzarella</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Personal Classic Pepperoni</span>
-<span class="item-desc">fresh mozzarella, tomato sauce, basil</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Personal Popeye</span>
-<span class="item-desc">mozzarella, fresh ricotta, spinach, roasted garlic, lemon zest</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Personal Shroom</span>
-<span class="item-desc">finely chopped mushrooms, fresh ricotta, bel paese cheese, truffle oil, chives (no sauce)</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Personal Spicy Sausage &amp; Onion</span>
-<span class="item-desc">mozzarella, sauce, crumbled sausage</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Personal The "Q"</span>
-<span class="item-desc">chicken sausage, applewood smoked bacon, bbq sauce, blue cheese</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Personal Veg</span>
-<span class="item-desc">green peppers, caramelized onions, roasted mushrooms, mozzarella, tomato sauce</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Personal White</span>
-<span class="item-desc">mozzarella, parmigiano, ricotta, roasted garlic</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Personal VEGAN Margherita</span>
-<span class="item-desc">vegan cheese, tomato sauce, basil</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Personal GLUTEN FREE Margherita</span>
-<span class="item-desc">fresh mozzarella, tomato sauce, basil on a homemade gluten free crust. *** Note that the pizza is cooked in our wood burning oven on a screen to limit cross contamination. We take every precaution to eliminate contact with flour but we advise you to consider your level of gluten sensitivity.</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Personal Salad Pizza</span>
-<span class="item-desc">Mixed greens, cherry tomatoes, red onions, shaved parmigiano, tomato sauce</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Large Margherita</span>
-<span class="item-desc">fresh mozzarella, tomato sauce, basil</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Large Loaded Pizza</span>
-<span class="item-desc">Large Margherita Pizza with 3 Topping included. Additional toppings can be added.</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Large Amici</span>
-<span class="item-desc">meatball, sweet sausage, pepperoni, mozzarella, sauce</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Large Chicken &amp; Broccoli</span>
-<span class="item-desc">grilled chicken, broccoli, roasted garlic, parmigiano, mozzarella, tomato sauce</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Large Di Parma</span>
-<span class="item-desc">mozzarella, arugula, prosciutto (no sauce)</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Large Giambotta</span>
-<span class="item-desc">roasted eggplant, mushrooms, peppers, fresh brooklyn ricotta</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Large Pepperoni Picante</span>
-<span class="item-desc">mozzarella, sauce, old school pepperoni, pickled jalapeno, creamy mozzarella</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Large Classic Pepperoni</span>
-<span class="item-desc">fresh mozzarella, tomato sauce, basil</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Large Popeye</span>
-<span class="item-desc">mozzarella, fresh ricotta, spinach, roasted garlic, lemon zest</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Large Shroom</span>
-<span class="item-desc">finely chopped mushrooms, fresh ricotta, bel paese cheese, truffle oil, chives (no sauce)</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Large Spicy Sausage &amp; Onion</span>
-<span class="item-desc">mozzarella, sauce, crumbled sausage</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Large The "Q"</span>
-<span class="item-desc">chicken sausage, applewood smoked bacon, bbq sauce, blue cheese</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Large Veg</span>
-<span class="item-desc">green peppers, caramelized onions, roasted mushrooms, mozzarella, tomato sauce</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Large White</span>
-<span class="item-desc">mozzarella, parmigiano, ricotta, roasted garlic</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Large Salad Pizza</span>
-<span class="item-desc">Mixed greens, cherry tomatoes, red onions, shaved parmigiano, tomato sauce</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Pizza Meal Deal</span>
-<span class="item-desc">Garlic Bread, Caesar or Tuscan Salad, and a Large Margherita Pizza (toppings additional).</span>
-</li>
-</ul>
-<div class="toppings-block">
-<span class="toppings-label">Traditional Toppings</span>
-<p class="toppings-text">pepperoni · meatball · sweet italian sausage · hot italian sausage · chicken sausage · anchovy · caramelized onion · kalamata olives · red onions · roasted mushroom · roasted red pepper · spinach · eggplant · cherry peppers · green peppers · jalapeno · broccoli · ricotta</p>
-<span class="toppings-label" style="margin-top:1rem;">Premium Toppings</span>
-<p class="toppings-text">applewood smoked bacon · stracciatella · prosciutto · grilled chicken · breaded chicken cutlet</p>
-<span class="toppings-label" style="margin-top:1rem;">Vegan Toppings</span>
-<p class="toppings-text">pepperoni · mozzarella</p>
-</div>
-</section>
-<!-- THE BURGER / HEROS / WICH -->
-<section class="menu-section alt">
-<span class="cat-eyebrow">Burgers, Heroes &amp; Wiches</span>
-<h2 class="cat-heading">Heros, Wiches &amp; Burger</h2>
-<span class="cat-rule"></span>
-<ul class="menu-list">
-<li class="menu-item">
-<span class="item-name">Burger</span>
-<span class="item-desc">beef blend, cheddar, balsamic shallots, lettuce, tomato, pickle, special sauce, brioche bun &amp; fries</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Plain Hamburger</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Plain Cheese Burger</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Hero Caprese</span>
-<span class="item-desc">fresh mozzarella, roasted peppers, tomato, prosciutto, basil, arugula, balsamic &amp; oil</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Hero Chicken Parm</span>
-<span class="item-desc">fresh mozzarella, pomodoro, toasted bread</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Hero Eggplant Parm</span>
-<span class="item-desc">fresh mozzarella, pomodoro, toasted bread</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Hero Grilled Chicken</span>
-<span class="item-desc">arugula, tomato, mayo</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Hero Grilled Chicken and Roasted Peppers</span>
-<span class="item-desc">fresh mozzarella</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Hero Meatball Parm</span>
-<span class="item-desc">fresh mozzarella, pomodoro, toasted bread</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Hero Sausage, Pepper &amp; Onions</span>
-<span class="item-desc">sauteed festival style</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Wich Chicken Bacon</span>
-<span class="item-desc">applewood smoked bacon, tomato, balsamic shallots, greens, mayo</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Wich Chicken Buratta</span>
-<span class="item-desc">creamy mozzarella, chicken cutlet, tomato, arugula cherry pepper, basil, balsamic</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Wich Milanese</span>
-<span class="item-desc">chicken, arugula, pickled red onion</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Wich Roasted Eggplant</span>
-<span class="item-desc">mozzarella, roasted peppers, basil, balsamic</span>
-</li>
-</ul>
-</section>
-<!-- PASTA -->
-<section class="menu-section">
-<span class="cat-eyebrow">Handmade</span>
-<h2 class="cat-heading">Pasta</h2>
-<span class="cat-rule"></span>
-<ul class="menu-list">
-<li class="menu-item">
-<span class="item-name">Bolo</span>
-<span class="item-desc">veal, beef &amp; pork bolognese, fettuccine, parmigiano</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Cavatelli Chicken Sausage</span>
-<span class="item-desc">chicken sausage, escarole, white beans, parmigiano</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Fettucine Alfredo</span>
-<span class="item-desc">classic parmigiano cream sauce</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Gnocchi Siciliana</span>
-<span class="item-desc">fried eggplant, fresh mozzarella, parmigiano, pomodoro, basil</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Lasagna</span>
-<span class="item-desc">layers of fresh pasta, bolognese meat sauce, ricotta, fresh mozzarella</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Mac &amp; Cheese</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Penne Butter Sauce</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Penne Garlic and Oil</span>
-<span class="item-desc">fresh garlic and extra virgin olive oil</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Penne Vodka</span>
-<span class="item-desc">pink cream sauce</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Ravioli Pomodoro</span>
-<span class="item-desc">homemade tomato sauce</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Ravioli Vermouth Sauce</span>
-<span class="item-desc">cheese ravioli, vermouth &amp; tomato cream sauce</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Rigatoni Burrata</span>
-<span class="item-desc">pomodoro, creamy mozzarella, fresh basil</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Rigatoni Pomodoro</span>
-<span class="item-desc">homemade tomato sauce</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Rigatoni Spicy Sausage</span>
-<span class="item-desc">creamy pomodoro, peas, fresh brooklyn ricotta</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Spaghetti Meatballs</span>
-<span class="item-desc">pomodoro sauce, parmigiano</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Spaghetti Spicy Shrimp</span>
-<span class="item-desc">cherry tomato, chili flakes, garlic &amp; oil</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Truffled Spaghetti</span>
-<span class="item-desc">sautéed exotic mushrooms, parmigiano, ricotta, chives</span>
-</li>
-</ul>
-</section>
-<!-- ENTREES -->
-<section class="menu-section alt">
-<span class="cat-eyebrow">Main Course</span>
-<h2 class="cat-heading">Entrees</h2>
-<span class="cat-rule"></span>
-<ul class="menu-list">
-<li class="menu-item">
-<span class="item-name">Chicken Francese</span>
-<span class="item-desc">egg battered, lemon white wine pan sauce, served with sautéed broccoli</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Chicken Marsala</span>
-<span class="item-desc">wild mushrooms, marsala wine sauce, served with crispy potatoes</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Chicken Milanese</span>
-<span class="item-desc">breaded chicken breast, topped with arugula, cherry tomatoes, pickled red onions, parmigiano</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Chicken Parm</span>
-<span class="item-desc">breaded chicken cutlet, pomodoro sauce, fresh mozzarella, served with rigatoni pomodoro</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Chicken Pillard</span>
-<span class="item-desc">grilled chicken, topped with arugula, cherry tomatoes, pickled red onions, parmigiano</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Chicken Scarpariello</span>
-<span class="item-desc">chicken breast, sweet sausage, spicy peppers, served with crispy potatoes</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Eggplant Parm</span>
-<span class="item-desc">layered fried eggplant, pomodoro sauce, fresh mozzarella, parmigiano, served with rigatoni pomodoro</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Hanger Steak</span>
-<span class="item-desc">grilled, fresh herb gremolata, crispy potatoes</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Salmon Piccata</span>
-<span class="item-desc">pan seared, lemon butter caper sauce, wood-oven sautéed broccoli</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Shrimp Francese</span>
-<span class="item-desc">egg battered, lemon white wine pan sauce, served with sautéed broccoli</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Shrimp Parm</span>
-<span class="item-desc">breaded and fried, pomodoro sauce, fresh mozzarella, served with rigatoni pomodoro</span>
-</li>
-</ul>
-</section>
-<!-- SIDES -->
-<section class="menu-section">
-<span class="cat-eyebrow">On the Side</span>
-<h2 class="cat-heading">Sides</h2>
-<span class="cat-rule"></span>
-<ul class="menu-list">
-<li class="menu-item">
-<span class="item-name">Sauteed Broccoli Side</span>
-<span class="item-desc">wood roasted broccoli</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Steamed Broccoli Side</span>
-<span class="item-desc">plain steamed</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Rstd Cauliflower Side</span>
-<span class="item-desc">wood roasted cauliflower</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Fries</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Truffle Fries</span>
-<span class="item-desc">parmigiano, fresh herbs</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Crispy Potatoes Side</span>
-<span class="item-desc">oven roasted potato</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Spinach Side</span>
-<span class="item-desc">sautéed spinach</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Side Plain Grilled Chicken</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Side Plain Chicken Cutlet</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Side Plain Sauteed Shrimp</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Pizza Crust</span>
-<span class="item-desc">Plain Wood Fired Pizza Crust</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Pizza Crust Gluten Free</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Rosemary Flatbread</span>
-</li>
-</ul>
-</section>
-<!-- DESSERT -->
-<section class="menu-section alt">
-<span class="cat-eyebrow">Sweet Finish</span>
-<h2 class="cat-heading">Dessert</h2>
-<span class="cat-rule"></span>
-<ul class="menu-list">
-<li class="menu-item">
-<span class="item-name">Affogato</span>
-<span class="item-desc">espresso, vanilla ice cream</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Bomboloni</span>
-<span class="item-desc">donut holes rolled in cinnamon-sugar, stuffed with nutella cream</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Cheesecake</span>
-<span class="item-desc">balsamic strawberry</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Chocolate Lava Cake</span>
-<span class="item-desc">chocolate cake, soft chocolate center, vanilla ice cream (contains gluten)</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Ice Cream Bowl</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Ice Cream (1 Scoop)</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Smores Pizza</span>
-<span class="item-desc">nutella, toasted marshmallows, graham cracker crumbs</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Tartuffo</span>
-<span class="item-desc">vanilla &amp; chocolate ice cream ball, raspberry center, chocolate ganache shell</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Tiramisu</span>
-<span class="item-desc">espresso dipped biscotti, mascarpone cream</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Zeppole</span>
-<span class="item-desc">powdered sugar, served "feast-style" in a bag</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Gelato Carte</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Occasion Cake</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Plating Charge per person</span>
-</li>
-</ul>
-</section>
-<!-- COCKTAILS -->
-<section class="menu-section">
-<span class="cat-eyebrow">Handcrafted</span>
-<h2 class="cat-heading">Cocktail</h2>
-<span class="cat-rule"></span>
-<ul class="menu-list">
-<li class="menu-item">
-<span class="item-name">Aperol Spritzer</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Doppio Espresso Martini</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Ginger Agave</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Golden Lemonade</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Limoncello Lemon Drop</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Negroni</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Spicy Italian Margarita</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Strawberry Lover</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Wild Rose</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Red Sangria</span>
-</li>
-<li class="menu-item">
-<span class="item-name">White Sangria</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Maple Bourbon Sour</span>
-</li>
-</ul>
-</section>
-<!-- WINE -->
-<section class="menu-section alt">
-<span class="cat-eyebrow">By the Glass</span>
-<h2 class="cat-heading">Wine</h2>
-<span class="cat-rule"></span>
-<ul class="menu-list">
-<li class="menu-item">
-<span class="item-name">Prosecco</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Rosé</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Pinot Grigio</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Sauvignon Blanc</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Chardonnay</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Montepulciano</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Malbec</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Pinot Noir</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Cabernet Sauvignon</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Red Sangria</span>
-</li>
-<li class="menu-item">
-<span class="item-name">White Sangria</span>
-</li>
-</ul>
-</section>
-<!-- BAR SNACKS -->
-<section class="menu-section">
-<span class="cat-eyebrow">At the Bar</span>
-<h2 class="cat-heading">Bar Bites</h2>
-<span class="cat-rule"></span>
-<ul class="menu-list">
-<li class="menu-item">
-<span class="item-name">Bar Bruschetta</span>
-<span class="item-desc">toasted ciabatta, tomato &amp; basil</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Bar Truffle Fries</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Bar Garlic Bread Bites</span>
-<span class="item-desc">rustic bread, parsley butter</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Bar Calamari</span>
-<span class="item-desc">radicchio, radish, shaved parmigiano, balsamic</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Mozzarella Sticks</span>
-<span class="item-desc">fried fresh mozzarella, pomodoro sauce</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Bar Flat Bread</span>
-<span class="item-desc">greens, tomato, shaved red onion, croutons, balsamic</span>
-</li>
-</ul>
-</section>
-<!-- DRAFT BEER -->
-<section class="menu-section alt">
-<span class="cat-eyebrow">On Tap</span>
-<h2 class="cat-heading">Draft Beer</h2>
-<span class="cat-rule"></span>
-<ul class="menu-list">
-<li class="menu-item">
-<span class="item-name">Drft Seasonal</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Drft Allegash Wht Wheat</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Drft Brooklyn Pulp Art IPA</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Drft Nite Light Lager</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Drft Peroni</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Drft Shipping Out Boston Lager</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Drft Threes All or Nothing IPA</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Drft VonTrap Helles</span>
-</li>
-</ul>
-</section>
-<!-- BOTTLED BEER -->
-<section class="menu-section">
-<span class="cat-eyebrow">Bottled</span>
-<h2 class="cat-heading">Bottled Beer</h2>
-<span class="cat-rule"></span>
-<ul class="menu-list single">
-<li class="menu-item">
-<span class="item-name">Coors Light</span>
-<span class="item-desc">lager</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Corona</span>
-<span class="item-desc">lager</span>
-</li>
-<li class="menu-item">
-<span class="item-name">Heineken</span>
-<span class="item-desc">lager</span>
-</li>
-<li class="menu-item">
-<span class="item-name">N/A Heineken 00</span>
-<span class="item-desc">lager</span>
-</li>
-</ul>
-</section>
+<!-- kora:data:menu layout="list" -->
+<!-- /kora:data:menu -->
 <!-- MEAL DEAL BAND -->
 <div class="meal-deal-band">
 <div class="meal-deal-inner">
@@ -1443,6 +637,33 @@
 <div aria-hidden="true" class="footer-divider"></div>
 <p class="footer-copy">© Frankie &amp; Fanucci's · Mamaroneck, NY</p>
 </footer>
+<script>
+    // Menu pills: highlight the section in view (the menu itself is drawn by Kora)
+    (function () {
+      var nav = document.querySelector('.kora-menu__nav');
+      if (!nav) return;
+      var pills = Array.prototype.slice.call(nav.querySelectorAll('a[href^="#"]'));
+      var sections = pills.map(function (a) { return document.getElementById(a.getAttribute('href').slice(1)); }).filter(Boolean);
+      if (!sections.length) return;
+      var active = null;
+      function update() {
+        var current = sections[0];
+        sections.forEach(function (s) { if (window.scrollY >= s.offsetTop - 170) current = s; });
+        var pill = pills.filter(function (a) { return a.getAttribute('href') === '#' + current.id; })[0];
+        if (pill === active) return;
+        pills.forEach(function (a) { a.classList.toggle('is-active', a === pill); });
+        active = pill;
+        if (pill) {
+          var pr = pill.getBoundingClientRect(), nr = nav.getBoundingClientRect();
+          if (pr.left < nr.left) nav.scrollBy({ left: pr.left - nr.left - 16, behavior: 'smooth' });
+          else if (pr.right > nr.right) nav.scrollBy({ left: pr.right - nr.right + 16, behavior: 'smooth' });
+        }
+      }
+      window.addEventListener('scroll', update, { passive: true });
+      window.addEventListener('load', update);
+      update();
+    })();
+  </script>
 <script>
     // Header scroll behaviour
     var header = document.getElementById('site-header');
